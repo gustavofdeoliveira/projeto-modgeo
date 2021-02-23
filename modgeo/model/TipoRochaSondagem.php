@@ -1,8 +1,8 @@
 <?php
 class TipoRochaSondagem{
-    private $profMax;
     private $tipoRocha;
     private $idNomeSondagem;
+    private $profMax;
     private $profMin;
 
     /**
