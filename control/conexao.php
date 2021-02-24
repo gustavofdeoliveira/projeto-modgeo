@@ -1,14 +1,21 @@
 <?php
-class Conexao
-{
-    static function conectar()
-    {
+class Conexao {
+    private $con;
+
+    function conectar(){
         try {
-           $pdo = new PDO('mysql:host=localhost;dbname=modgeo', 'root', '');
-          $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          return $pdo;
-        } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
-        }
+        $usuario="root";
+        $senha = "root";
+        $con = new PDO('mysql:host=localhost;dbname=modegeo1', $usuario, $senha);
+        $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "conexão pronta";
+            } catch(PDOException $e) {
+                echo 'ERROR: ' . $e->getMessage();
+                return $con;
+            }
     }
 }
+
+$cone = new Conexao();
+$cone -> conectar();
+?>
