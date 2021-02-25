@@ -21,7 +21,6 @@ class NomeSondagemControl{
                 $this->modelo->setProfundidade($_POST["profundidade"]);
                 $this->modelo->setInclinacao($_POST["inclinacao"]);
                 $this->modelo->setGeoreferenciamento($_POST["georeferenciamento"]);
-
                 $this->dao->inserir($this->modelo);
                 header("Location:../view/CadTipoRochaSondagem.php");
                 break;

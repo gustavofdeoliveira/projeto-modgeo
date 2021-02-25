@@ -9,8 +9,8 @@ Prof.Mínima
     <input type="text" name="profMax"><br>
     Tipo de Rocha
     <select name="tipoRocha">
-        <option>Basalto</option>
-        <option>Arenito</option>
+        <option name="Basalto">Basalto</option>
+        <option name="Arenito">Arenito</option>
     </select><br>
     <input type="submit" value="Salvar">
 </form>
