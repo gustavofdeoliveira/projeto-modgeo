@@ -1,5 +1,5 @@
 <form action="../control/NomeSondagemControl.php" method="POST">
-    Nome<input type="text" name = "nome"><br>
+    Nome<input type="text"><br>
     Coordenada X<input type="text" name = "coordx"><br>
     Coordenada Y<input type="text" name = "coordy"><br>
     Profundidade<input type="text" name = "profundidade"><br>

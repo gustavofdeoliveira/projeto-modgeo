@@ -1,21 +1,23 @@
 <?php
 session_start();
-require_once ("../control/Conexao.php");
+require_once("../control/Conexao.php");
 
-class NomeSondagemDAO{
+class NomeSondagemDAO
+{
     private $conn;
-   function __construct()
-   {
-        $this->conn=Conexao::conectar();
-   }
-   function inserir(NomeSondagem $modelo){
-       $sql="insert into nome_sondagem(nome,coord_x,coord_y,profundidade,cota,inclinacao,georeferenciamento) 
-                          values('".$modelo->getNome()."','".$modelo->getCoordx()."','".$modelo->getCoordy()."','".
-                                $modelo->getProfundidade()."','".$modelo->getCota()."','".$modelo->getInclinacao()."','".$modelo->getGeoreferenciamento()."')";
-      $this->conn->exec($sql);
-      $_SESSION["id"]=$this->conn->lastInsertId();
+    function __construct()
+    {
+        $this->conn = Conexao::conectar();
+    }
+    function inserir(NomeSondagem $modelo)
+    {
+        $sql = "insert into nome_sondagem(nome,coord_x,coord_y,profundidade,cota,inclinacao,georeferenciamento) 
+                          values('" . $modelo->getNome() . "','" . $modelo->getCoordx() . "','" . $modelo->getCoordy() . "','" .
+            $modelo->getProfundidade() . "','" . $modelo->getCota() . "','" . $modelo->getInclinacao() . "','" . $modelo->getGeoreferenciamento() . "')";
+        $this->conn->exec($sql);
+        $_SESSION["id"] = $this->conn->lastInsertId();
 
-       /*$stmt = $this->conn->prepare($sql);
+        /*$stmt = $this->conn->prepare($sql);
 
        $stmt->execute(array(
            ':nome' => $modelo->getNome(),
@@ -24,6 +26,5 @@ class NomeSondagemDAO{
            ':profundidade'=>$modelo->getProfundidade(),
            ':cota'=>$modelo->getCota())
        );*/
-
-   }
+    }
 }
