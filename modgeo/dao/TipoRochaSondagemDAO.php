@@ -12,7 +12,6 @@ class TipoRochaSondagemDAO
     {
         $sql = "insert into tipo_rocha_sondagem(profundidade_min, profundidade_max, tipo_rocha, id_sondagem)values('" . $modelo->getProfMin() . "','" . $modelo->getProfMax() . "','" . $modelo->getTipoRocha() . "','" .
             $modelo->getIdNomeSondagem() . "')";
-
         echo $sql;
         $this->conn->exec($sql);
     }
