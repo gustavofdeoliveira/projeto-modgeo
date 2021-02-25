@@ -11,9 +11,11 @@ class NomeSondagemDAO
     }
     function inserir(NomeSondagem $modelo)
     {
-        $sql = "insert into nome_sondagem(nome,coord_x,coord_y,profundidade,cota,inclinacao,georeferenciamento) 
-                          values('" . $modelo->getNome() . "','" . $modelo->getCoordx() . "','" . $modelo->getCoordy() . "','" .
-            $modelo->getProfundidade() . "','" . $modelo->getCota() . "','" . $modelo->getInclinacao() . "','" . $modelo->getGeoreferenciamento() . "')";
+        $sql = "insert into nome_sondagem(nome,coord_x,coord_y,profundidade,cota,inclinacao,georeferenciamento) values('" . $modelo->getNome() . "','" . $modelo->getCoordx() . "','" . $modelo->getCoordy() . "','" .
+        $modelo->getProfundidade() . "','" . $modelo->getCota() . "','" . $modelo->getInclinacao() . "','" . $modelo->getGeoreferenciamento() . "')";
+
+        echo $sql;
+
         $this->conn->exec($sql);
         $_SESSION["id"] = $this->conn->lastInsertId();
 
