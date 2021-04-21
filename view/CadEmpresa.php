@@ -8,7 +8,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'><!-- fonte do site-->
     <link rel="stylesheet" href="../css/index.css">
-    <title>Cadastro de Sondagens</title>
+    <title>Cadastro de Empresas</title>
 </head>
 
 <body>
