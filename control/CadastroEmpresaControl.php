@@ -20,10 +20,9 @@ class CadastroEmpresaControl{
                 $this->modelo->setEmail($_POST["email"]);
                 $this->modelo->setTelefone($_POST["telefone"]);
                 $this->dao->inserir($this->modelo);
-                header("Location:../view/CadTipoRochaSondagem.php");
                 break;
         }
     }
 
 }
-new NomeSondagemControl();
+new CadastroEmpresaControl();

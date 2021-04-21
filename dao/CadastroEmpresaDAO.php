@@ -13,7 +13,6 @@ class CadastroEmpresaDAO
     {
         $sql = "insert into empresa(nome,cnpj,cidade_origem,email,telefone) values('" . $modelo->getNome() . "','" . $modelo->getCnpj() . "','" . $modelo->getCidadeOrigem() . "','" . $modelo->getEmail() . "','" . $modelo->getTelefone() . "')";
         $this->conn->exec($sql);
-        $_SESSION["id"] = $this->conn->lastInsertId();
 
         /*$stmt = $this->conn->prepare($sql);
 
