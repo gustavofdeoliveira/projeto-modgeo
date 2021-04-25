@@ -1,6 +1,5 @@
 <?php
 session_start();
-include_once("../control/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -81,7 +80,14 @@ include_once("../control/conexao.php");
           <option name="Xisto">Xisto</option>
         </select>
       </div>
-
+      <div class="form-group">
+        <label for="hachuras"> Hachuras:</label>
+        <input class="form-control" type="text" name="hachuras">
+      </div>
+      <div class="form-group">
+        <label for="cor"> Cor:</label>
+        <input class="form-control" type="text" name="cor">
+      </div>
       <input type="hidden" name="acao" value="1">
       <input class="btn btn-success btn-lg" type="submit" value="Salvar">
 
