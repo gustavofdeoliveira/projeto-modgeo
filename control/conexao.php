@@ -1,4 +1,11 @@
 <?php
+	$servidor = "localhost";
+	$usuario = "root";
+	$senha = "root";
+	$dbname = "modgeo";
+	
+	//Criar a conexao
+	$con = mysqli_connect($servidor, $usuario, $senha, $dbname);
 class Conexao
 {
     static function conectar()

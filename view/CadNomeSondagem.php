@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once("../control/conexao.php");
+?>
 <!DOCTYPE html>
 <html lang="tt-br">
 
@@ -32,19 +36,52 @@
         <form action="../control/NomeSondagemControl.php" method="POST" class="form-group">
 
             <div class="form-group">
-                <label class="form-label" for="nome">Nome</label>
+                <label class="form-label" for="nome">Nome da Sondagem:</label>
                 <input class="form-control" type="text" name="nome">
             </div>
             <div class="form-group">
-                <label class="form-label" for="coordx">Coordenada X</label>
+                <label for="responsavel"> Executado Por: </label>
+                <select class="form-control" name="responsavel">
+                    <option>Selecione</option>
+                    <?php
+                    $result_niveis_acessos = "SELECT * FROM empresa";
+                    $resultado_niveis_acesso = mysqli_query($con, $result_niveis_acessos);
+                    while ($row_niveis_acessos = mysqli_fetch_assoc($resultado_niveis_acesso)) { ?>
+                        <option value="<?php echo $row_niveis_acessos['nome']; ?>"><?php echo $row_niveis_acessos['nome']; ?></option> <?php
+                                                                                                                                            }
+                                                                                                                                                ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="inicio" class="col-2 col-form-label">Data Início:</label>
+                <div class="col-10">
+                    <input class="form-control" type="date" value="AAAA/MM/DD" name="inicio">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="termino" class="col-2 col-form-label">Data Termino:</label>
+                <div class="col-10">
+                    <input class="form-control" type="date" value="AAAA/MM/DD" name="termino">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="coordx">Coordenada X:</label>
                 <input class="form-control" type="text" name="coordx">
             </div>
             <div class="form-group">
-                <label class="form-label" for="coordy">Coordenada Y</label>
+                <label class="form-label" for="coordy">Coordenada Y:</label>
                 <input class="form-control" type="text" name="coordy">
             </div>
             <div class="form-group">
-                <label class="form-label" for="profundidade">Profundidade</label>
+                <label class="form-label" for="cota">Cota:</label>
+                <input class="form-control" type="text" name="cota">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="direcao">Direção:</label>
+                <input class="form-control" type="text" name="direcao">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="profundidade">Profundidade:</label>
                 <input class="form-control" type="text" name="profundidade">
             </div>
             <div class="form-group">
@@ -52,12 +89,12 @@
                 <input class="form-control" type="text" name="inclinacao">
             </div>
             <div class="form-group">
-                <label class="form-label" for="georeferenciamento">Georeferenciamento</label>
+                <label class="form-label" for="georeferenciamento">Georeferenciamento:</label>
                 <input class="form-control" type="text" name="georeferenciamento">
             </div>
             <div class="form-group">
-                <label class="form-label" for="cota">Cota</label>
-                <input class="form-control" type="text" name="cota">
+                <label for="comentario">Comentário:</label>
+                <textarea class="form-control" rows="3" name="comentario"></textarea>
             </div>
             <input type="hidden" name="acao" value="1">
             <input class="btn btn-success btn-lg" type="submit" value="Gravar">

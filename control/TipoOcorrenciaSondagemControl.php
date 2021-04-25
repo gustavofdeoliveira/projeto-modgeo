@@ -1,14 +1,14 @@
 <?php 
-require_once "../dao/TipoRochaSondagemDAO.php";
-require_once "../model/TipoRochaSondagem.php";
+require_once "../dao/TipoOcorrenciaSondagemDAO.php";
+require_once "../model/TipoOcorrenciaSondagem.php";
 
-    class TipoSondagemControl{
+    class TipoOcorrenciaControl{
         private $dao;
         private $modelo;
         private $acao;
         function __construct(){
-            $this->dao=new TipoRochaSondagemDAO();
-            $this->modelo=new TipoRochaSondagem();
+            $this->dao=new TipoOcorrenciaSondagemDAO();
+            $this->modelo=new TipoOcorrenciaSondagem();
             $this->acao=$_REQUEST["acao"];
             $this->verificaAcao();
         }

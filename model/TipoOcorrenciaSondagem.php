@@ -1,5 +1,5 @@
 <?php
-class TipoRochaSondagem{
+class TipoOcorrenciaSondagem{
     private $profMax;
     private $tipoRocha;
     private $idNomeSondagem;

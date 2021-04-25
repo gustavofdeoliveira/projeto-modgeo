@@ -31,7 +31,7 @@ session_start();
   </header>
   <div class="container well">
 
-    <form action="../control/TipoRochaSondagemControl.php" method="POST" class="form-group">
+    <form action="../control/TipoOcorrenciaSondagemControl.php" method="POST" class="form-group">
 
       <div class="form-group">
         <label for="profMin"> Prof.Mínima </label>

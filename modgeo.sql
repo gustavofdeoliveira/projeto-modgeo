@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Abr-2021 às 00:48
+-- Tempo de geração: 25-Abr-2021 às 20:32
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -36,6 +36,14 @@ CREATE TABLE `empresa` (
   `telefone` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `empresa`
+--
+
+INSERT INTO `empresa` (`id_empresa`, `nome`, `cnpj`, `cidade_origem`, `email`, `telefone`) VALUES
+(2, 'Basalto LTDA', '1234567891011', 'Santa Terezinha', 'basaltoltda@hotmail.com', '9950-8717'),
+(3, 'Zinco Companhia', '0123456789', 'Foz do Iguaçu', 'zincocompanhia@gmail.com', '01234567');
+
 -- --------------------------------------------------------
 
 --
@@ -46,10 +54,10 @@ CREATE TABLE `nome_sondagem` (
   `id_sondagem` int(11) NOT NULL,
   `nome` varchar(15) NOT NULL,
   `responsavel` varchar(150) NOT NULL,
-  `coord_x` float NOT NULL,
-  `coord_y` float NOT NULL,
   `inicio` date NOT NULL,
   `termino` date NOT NULL,
+  `coord_x` float NOT NULL,
+  `coord_y` float NOT NULL,
   `cota` float NOT NULL,
   `direcao` varchar(5) NOT NULL,
   `profundidade` float NOT NULL,
@@ -57,6 +65,14 @@ CREATE TABLE `nome_sondagem` (
   `georeferenciamento` float NOT NULL,
   `comentario` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `nome_sondagem`
+--
+
+INSERT INTO `nome_sondagem` (`id_sondagem`, `nome`, `responsavel`, `inicio`, `termino`, `coord_x`, `coord_y`, `cota`, `direcao`, `profundidade`, `inclinacao`, `georeferenciamento`, `comentario`) VALUES
+(20, 'Carlos Andre', 'Basalto LTDA', '2021-04-10', '2021-04-25', 8439, 934, 9843, '45678', 8, 10, 843, '123456789qwertyuiopasdfghjklzxcvbnm,'),
+(21, 'Felipe de Tal', 'Zinco Companhia', '2021-04-10', '2021-04-15', 8439, 934, 123, '45678', 8, 10, 843, '098765432qwertyuioplkjhgfdsazxcvbnm,');
 
 -- --------------------------------------------------------
 
@@ -80,7 +96,7 @@ CREATE TABLE `parametros_sondagem` (
 --
 
 CREATE TABLE `tipo_ocorrencia _sondagem` (
-  `id_tipo_rocha_sondagem` int(11) NOT NULL,
+  `id_tipo_ocorrencia_sondagem` int(11) NOT NULL,
   `profundidade_min` float NOT NULL,
   `profundidade_max` float NOT NULL,
   `tipo_rocha` varchar(30) NOT NULL,
@@ -116,7 +132,7 @@ ALTER TABLE `parametros_sondagem`
 -- Índices para tabela `tipo_ocorrencia _sondagem`
 --
 ALTER TABLE `tipo_ocorrencia _sondagem`
-  ADD PRIMARY KEY (`id_tipo_rocha_sondagem`),
+  ADD PRIMARY KEY (`id_tipo_ocorrencia_sondagem`),
   ADD KEY `id_sondagem` (`id_sondagem`);
 
 --
@@ -127,13 +143,13 @@ ALTER TABLE `tipo_ocorrencia _sondagem`
 -- AUTO_INCREMENT de tabela `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `nome_sondagem`
 --
 ALTER TABLE `nome_sondagem`
-  MODIFY `id_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `parametros_sondagem`
@@ -145,7 +161,7 @@ ALTER TABLE `parametros_sondagem`
 -- AUTO_INCREMENT de tabela `tipo_ocorrencia _sondagem`
 --
 ALTER TABLE `tipo_ocorrencia _sondagem`
-  MODIFY `id_tipo_rocha_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_tipo_ocorrencia_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restrições para despejos de tabelas
