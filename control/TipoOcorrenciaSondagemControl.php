@@ -2,7 +2,7 @@
 require_once "../dao/TipoOcorrenciaSondagemDAO.php";
 require_once "../model/TipoOcorrenciaSondagem.php";
 
-    class TipoOcorrenciaControl{
+    class TipoOcorrenciaSondagemControl{
         private $dao;
         private $modelo;
         private $acao;
@@ -20,6 +20,7 @@ require_once "../model/TipoOcorrenciaSondagem.php";
                     $this->modelo->setTipoRocha($_POST["tipoRocha"]);
                     $this->modelo->setIdNomeSondagem($_POST["id"]);
                     $this->dao->inserir($this->modelo);
+                    header("Location:../view/CadParametrosSondagem.php");
                     break;
             }
     }

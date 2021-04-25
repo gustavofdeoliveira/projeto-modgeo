@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once("../control/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,6 +14,7 @@ session_start();
   <link rel="stylesheet" href="../css/index.css">
   <title>Cadastro de Rochas</title>
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-default" role="navigation">
@@ -44,8 +46,39 @@ session_start();
       <div class="form-group">
         <label for="tipoRocha"> Tipo de Rocha </label>
         <select class="form-control" name="tipoRocha">
-          <option name="Basalto">Basalto</option>
+          <option name="Agua">Água</option>
+          <option name="Andesito">Andesito</option>
           <option name="Arenito">Arenito</option>
+          <option name="Arenito Argiloso">Arenito Argiloso</option>
+          <option name="Arenito com Níveis Calcarios">Arenito com Níveis Calcários</option>
+          <option name="Argilito">Argilito</option>
+          <option name="Basalto">Basalto</option>
+          <option name="Brecha">Brecha</option>
+          <option name="Calcario">Calcário</option>
+          <option name="Calcario Estratificado">Calcário Estratificado</option>
+          <option name="Calcario Oolitico">Calcário Oolitico</option>
+          <option name="Calcarenito">Calcarenito</option>
+          <option name="Conglomerado">Conglomerado</option>
+          <option name="Diabasio">Diabásico</option>
+          <option name="Dolomito">Dolomito</option>
+          <option name="Diamictito">Diamictito</option>
+          <option name="Filito">Filito</option>
+          <option name="Folhelho">Folhelho</option>
+          <option name="Folhelho Carbonoso">Folhelho Carbonoso</option>
+          <option name="Folhelho com niveis calcarios">Folhelho com Níveis Calcários</option>
+          <option name="Gabro/Piroxenito">Gabro/Piroxenito</option>
+          <option name="Gnaisse">Gnaisse</option>
+          <option name="Granito Vermelho">Granito Vermelho</option>
+          <option name="Marmore Calcitio">Mármore Calcítio</option>
+          <option name="Marmore Dolomítico">Mármore Dolomítico</option>
+          <option name="Metassiltito">Metassiltito</option>
+          <option name="Metarritmito">Metarritmito</option>
+          <option name="Metarritmito">Migmatito</option>
+          <option name="Quartzito">Quartzito</option>
+          <option name="Sienito">Sienito</option>
+          <option name="Siltito">Siltito</option>
+          <option name="Tilito">Tilito</option>
+          <option name="Xisto">Xisto</option>
         </select>
       </div>
 
