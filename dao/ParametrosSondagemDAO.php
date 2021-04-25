@@ -11,7 +11,7 @@ class ParametrosSondagemDAO
     }
     function inserir(ParametrosSondagem $modelo)
     {
-        $sql = "insert into parametros_sondagem(alteracao, consistencia, fraturamento, rqd,id_sondagem)values('" . $modelo->getAlteracao() . "','" . $modelo->getConsistencia() . "','" . $modelo->getFraturamento() . "','" .$modelo->getRqd() . "','" .$modelo->getIdSondagem() . "')";
+        $sql = "insert into parametros_sondagem(alteracao,consistencia,fraturamento,rqd,id_sondagem)values('" . $modelo->getAlteracao() . "','" . $modelo->getConsistencia() . "','" . $modelo->getFraturamento() . "','" .$modelo->getRqd() . "','" .$modelo->getIdSondagem() . "')";
 
         $this->conn->exec($sql);
         $_SESSION["id"] = $this->conn->lastInsertId();

@@ -24,4 +24,4 @@ require_once "../model/ParametrosSondagem.php";
                     break;
             }
     }
-}
+}new ParametrosSondagemControl();
