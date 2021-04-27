@@ -18,14 +18,19 @@ class NomeSondagemControl
         switch ($this->acao) {
             case 1:
                 $this->modelo->setNome($_POST["nome"]);
+                $this->modelo->setResponsavel($_POST["responsavel"]);
+                $this->modelo->setInicio($_POST["inicio"]);
+                $this->modelo->setTermino($_POST["termino"]);
                 $this->modelo->setCoordx($_POST["coordx"]);
                 $this->modelo->setCoordy($_POST["coordy"]);
                 $this->modelo->setCota($_POST["cota"]);
+                $this->modelo->setDirecao($_POST["direcao"]);
                 $this->modelo->setProfundidade($_POST["profundidade"]);
                 $this->modelo->setInclinacao($_POST["inclinacao"]);
                 $this->modelo->setGeoreferenciamento($_POST["georeferenciamento"]);
+                $this->modelo->setComentario($_POST["comentario"]);
                 $this->dao->inserir($this->modelo);
-                header("Location:../view/CadTipoRochaSondagem.php");
+                header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;
         }
     }

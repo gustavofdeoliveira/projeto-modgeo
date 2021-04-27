@@ -11,6 +11,7 @@ class NomeSondagemDAO
     }
     function inserir(NomeSondagem $modelo)
     {
+<<<<<<< HEAD
         $sql = "insert into nome_sondagem(nome,coord_x,coord_y,profundidade,cota,inclinacao,georeferenciamento) values('" . $modelo->getNome() . "','" . $modelo->getCoordx() . "','" . $modelo->getCoordy() . "','" .
         $modelo->getProfundidade() . "','" . $modelo->getCota() . "','" . $modelo->getInclinacao() . "','" . $modelo->getGeoreferenciamento() . "')";
 
@@ -28,5 +29,12 @@ class NomeSondagemDAO
            ':profundidade'=>$modelo->getProfundidade(),
            ':cota'=>$modelo->getCota())
        );*/
+=======
+        $sql = "insert into nome_sondagem(nome,responsavel,inicio,termino,coord_x,coord_y,cota,direcao,profundidade,inclinacao,georeferenciamento,comentario) 
+                          values('" . $modelo->getNome() . "','" . $modelo->getResponsavel() . "','" . $modelo->getInicio() . "','" . $modelo->getTermino() . "','" . $modelo->getCoordx() . "','" . $modelo->getCoordy() . "','" . $modelo->getCota() . "','" . $modelo->getDirecao() . "','" .
+            $modelo->getProfundidade() . "','" . $modelo->getInclinacao() . "','" . $modelo->getGeoreferenciamento() . "','" . $modelo->getComentario() . "')";
+        $this->conn->exec($sql);
+        $_SESSION["id"] = $this->conn->lastInsertId();
+>>>>>>> upstream/main
     }
 }
