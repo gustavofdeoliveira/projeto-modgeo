@@ -19,6 +19,8 @@ require_once "../model/TipoOcorrenciaSondagem.php";
                     $this->modelo->setProfMax($_POST["profMax"]);
                     $this->modelo->setTipoRocha($_POST["tipoRocha"]);
                     $this->modelo->setIdNomeSondagem($_POST["id"]);
+                    $this->modelo->setHachuras($_POST["hachuras"]);
+                    $this->modelo->setCor($_POST["cor"]);
                     $this->dao->inserir($this->modelo);
                     header("Location:../view/CadParametrosSondagem.php");
                     break;

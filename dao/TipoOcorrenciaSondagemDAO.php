@@ -9,7 +9,7 @@ class TipoOcorrenciaSondagemDAO{
         $this->conn=Conexao::conectar();
    }
    function inserir(TipoOcorrenciaSondagem $modelo){
-       $sql = "insert into tipo_ocorrencia_sondagem(profundidade_min, profundidade_max, tipo_rocha, id_nome_sondagem)values('".$modelo->getProfMin()."','".$modelo->getProfMax()."','".$modelo->getTipoRocha()."','".$modelo->getIdNomeSondagem()."')";
+       $sql = "insert into tipo_ocorrencia _sondagem(profundidade_min, profundidade_max, tipo_rocha, id_sondagem, hachuras,cor)values('".$modelo->getProfMin()."','".$modelo->getProfMax()."','".$modelo->getTipoRocha()."','".$modelo->getIdNomeSondagem()."','".$modelo->getHachuras()."','".$modelo->getCor()."')";
 
        
        $this->conn->exec($sql);

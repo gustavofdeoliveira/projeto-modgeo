@@ -1,9 +1,12 @@
 <?php
-class TipoOcorrenciaSondagem{
+class TipoOcorrenciaSondagem
+{
     private $profMax;
     private $tipoRocha;
     private $idNomeSondagem;
     private $profMin;
+    private $hachuras;
+    private $cor;
 
     /**
      * @return mixed
@@ -69,4 +72,35 @@ class TipoOcorrenciaSondagem{
         $this->idNomeSondagem = $idNomeSondagem;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getHachuras()
+    {
+        return $this->hachuras;
+    }
+
+    /**
+     * @param mixed $hachuras
+     */
+    public function setHachuras($hachuras)
+    {
+        $this->hachuras = $hachuras;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCor()
+    {
+        return $this->cor;
+    }
+
+    /**
+     * @param mixed $cor
+     */
+    public function setCor($cor)
+    {
+        $this->cor = $cor;
+    }
 }
