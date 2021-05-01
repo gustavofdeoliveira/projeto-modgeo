@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Abr-2021 às 20:32
+-- Tempo de geração: 01-Maio-2021 às 22:05
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
 
@@ -71,8 +71,12 @@ CREATE TABLE `nome_sondagem` (
 --
 
 INSERT INTO `nome_sondagem` (`id_sondagem`, `nome`, `responsavel`, `inicio`, `termino`, `coord_x`, `coord_y`, `cota`, `direcao`, `profundidade`, `inclinacao`, `georeferenciamento`, `comentario`) VALUES
-(20, 'Carlos Andre', 'Basalto LTDA', '2021-04-10', '2021-04-25', 8439, 934, 9843, '45678', 8, 10, 843, '123456789qwertyuiopasdfghjklzxcvbnm,'),
-(21, 'Felipe de Tal', 'Zinco Companhia', '2021-04-10', '2021-04-15', 8439, 934, 123, '45678', 8, 10, 843, '098765432qwertyuioplkjhgfdsazxcvbnm,');
+(22, 'Felipe de Tal', 'Zinco Companhia', '2021-01-04', '2021-03-10', 1234, 123, 10, '1234', 20, 10, 843, 'wertyuioçlkjhgds'),
+(23, 'Carlos Andre', 'Basalto LTDA', '2001-10-04', '2003-04-05', 123, 934, 134, '45678', 20, 10, 843, 'qweuiojfgtty'),
+(24, 'Carlos Andre', 'Basalto LTDA', '2021-10-04', '2021-12-30', 123, 934, 9843, '1234', 20, 10, 843, 'asdfghjklçpoiuytrewq'),
+(25, '', 'Selecione', '0000-00-00', '0000-00-00', 0, 0, 123, '45678', 8, 10, 843, 'asdfghj'),
+(26, 'Carlos Andre', 'Zinco Companhia', '2010-10-10', '2010-10-20', 12, 124, 134, '1234', 20, 10, 843, 'asdfghjkl'),
+(27, 'cota 1', 'Zinco Companhia', '2022-02-10', '2022-03-20', 123, 124, 123, '1234', 20, 10, 843, 'asdfghj');
 
 -- --------------------------------------------------------
 
@@ -89,21 +93,41 @@ CREATE TABLE `parametros_sondagem` (
   `id_sondagem` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `parametros_sondagem`
+--
+
+INSERT INTO `parametros_sondagem` (`id_parametros_sondagem`, `alteracao`, `consistencia`, `fraturamento`, `rqd`, `id_sondagem`) VALUES
+(5, 123, 234, 345, 456, 22),
+(9, 1234, 2345, 3456, 4567, 26),
+(10, 1234, 2345, 3456, 4567, 27);
+
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tipo_ocorrencia _sondagem`
+-- Estrutura da tabela `tipo_ocorrencia_sondagem`
 --
 
-CREATE TABLE `tipo_ocorrencia _sondagem` (
-  `id_tipo_ocorrencia_sondagem` int(11) NOT NULL,
+CREATE TABLE `tipo_ocorrencia_sondagem` (
+  `id_tipo_rocha_sondagem` int(11) NOT NULL,
   `profundidade_min` float NOT NULL,
   `profundidade_max` float NOT NULL,
   `tipo_rocha` varchar(30) NOT NULL,
   `id_sondagem` int(11) NOT NULL,
-  `hachuras` varchar(50) NOT NULL,
+  `hachuras` varchar(6) NOT NULL,
   `cor` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tipo_ocorrencia_sondagem`
+--
+
+INSERT INTO `tipo_ocorrencia_sondagem` (`id_tipo_rocha_sondagem`, `profundidade_min`, `profundidade_max`, `tipo_rocha`, `id_sondagem`, `hachuras`, `cor`) VALUES
+(10, 10, 40, 'Água', 22, 'asd', '#000000'),
+(11, 10, 40, 'Água', 22, 'asd', '#000000'),
+(13, 10, 40, 'Água', 24, 'asd', '#000000'),
+(15, 10, 40, 'Filito', 26, 'asd', '#000000'),
+(16, 10, 40, 'Diamictito', 27, 'asd', '#000000');
 
 --
 -- Índices para tabelas despejadas
@@ -129,10 +153,10 @@ ALTER TABLE `parametros_sondagem`
   ADD KEY `id_sondagem` (`id_sondagem`);
 
 --
--- Índices para tabela `tipo_ocorrencia _sondagem`
+-- Índices para tabela `tipo_ocorrencia_sondagem`
 --
-ALTER TABLE `tipo_ocorrencia _sondagem`
-  ADD PRIMARY KEY (`id_tipo_ocorrencia_sondagem`),
+ALTER TABLE `tipo_ocorrencia_sondagem`
+  ADD PRIMARY KEY (`id_tipo_rocha_sondagem`),
   ADD KEY `id_sondagem` (`id_sondagem`);
 
 --
@@ -149,19 +173,19 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de tabela `nome_sondagem`
 --
 ALTER TABLE `nome_sondagem`
-  MODIFY `id_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de tabela `parametros_sondagem`
 --
 ALTER TABLE `parametros_sondagem`
-  MODIFY `id_parametros_sondagem` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_parametros_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT de tabela `tipo_ocorrencia _sondagem`
+-- AUTO_INCREMENT de tabela `tipo_ocorrencia_sondagem`
 --
-ALTER TABLE `tipo_ocorrencia _sondagem`
-  MODIFY `id_tipo_ocorrencia_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `tipo_ocorrencia_sondagem`
+  MODIFY `id_tipo_rocha_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restrições para despejos de tabelas
@@ -171,7 +195,13 @@ ALTER TABLE `tipo_ocorrencia _sondagem`
 -- Limitadores para a tabela `parametros_sondagem`
 --
 ALTER TABLE `parametros_sondagem`
-  ADD CONSTRAINT `sondagem_parameto` FOREIGN KEY (`id_sondagem`) REFERENCES `nome_sondagem` (`id_sondagem`);
+  ADD CONSTRAINT `fk_id_sondagem` FOREIGN KEY (`id_sondagem`) REFERENCES `nome_sondagem` (`id_sondagem`);
+
+--
+-- Limitadores para a tabela `tipo_ocorrencia_sondagem`
+--
+ALTER TABLE `tipo_ocorrencia_sondagem`
+  ADD CONSTRAINT `id_sondagem` FOREIGN KEY (`id_sondagem`) REFERENCES `nome_sondagem` (`id_sondagem`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
