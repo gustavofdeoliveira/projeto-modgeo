@@ -17,7 +17,7 @@ class TipoOcorrenciaSondagemControl{
                 $this->modelo->setProfMin($_POST["profMin"]);
                 $this->modelo->setProfMax($_POST["profMax"]);
                 $this->modelo->setTipoRocha($_POST["tipoRocha"]);
-                $this->modelo->setIdSondagem($_SESSION["id"]);
+                $this->modelo->setIdNomeSondagem($_SESSION["id"]);
                 $this->modelo->setHachuras($_POST["hachuras"]);
                 $this->modelo->setCor($_POST["cor"]);
                 $this->dao->inserir($this->modelo);

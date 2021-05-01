@@ -11,8 +11,11 @@ class TipoOcorrenciaSondagemDAO
     }
     function inserir(TipoOcorrenciaSondagem $modelo)
     {
-        $sql = "INSERT INTO tipo_ocorrencia_sondagem(profundidade_min, profundidade_max, tipo_rocha,id_sondagem,hachuras,cor)VALUES('".$modelo->getProfMin()."','".$modelo->getProfMax()."','".$modelo->getTipoRocha()."', '".$modelo -> getHachuras()."', '".$modelo -> getCor()."')";
+        $sql = "insert into tipo_ocorrencia_sondagem(profundidade_min, profundidade_max, tipo_rocha, id_sondagem,hachuras,cor)values('" . $modelo->getProfMin() . "','" . $modelo->getProfMax() . "','" . $modelo->getTipoRocha() . "','" .
+            $modelo->getIdNomeSondagem() . "','" .
+            $modelo->getHachuras() . "','" .
+            $modelo->getCor() . "')";
+        echo $sql;
         $this->conn->exec($sql);
-      $_SESSION["id"]=$this->conn->lastInsertId();
     }
 }
