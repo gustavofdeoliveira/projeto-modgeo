@@ -89,7 +89,7 @@ session_start();
       </div>
       <div class="form-group">
         <label for="cor"> Cor:</label>
-        <input class="form-control" type="text" name="cor">
+        <input class="form-control" type="color" name="cor">
       </div>
       <input type="hidden" name="acao" value="1">
       <input class="btn btn-success btn-lg" type="submit" value="Salvar">

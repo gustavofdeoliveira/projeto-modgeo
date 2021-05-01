@@ -1,10 +1,10 @@
 <?php
 class TipoOcorrenciaSondagem
 {
+    private $profMin;
     private $profMax;
     private $tipoRocha;
-    private $idNomeSondagem;
-    private $profMin;
+    private $idSondagem;
     private $hachuras;
     private $cor;
 
@@ -59,17 +59,17 @@ class TipoOcorrenciaSondagem
     /**
      * @return mixed
      */
-    public function getIdNomeSondagem()
+    public function getIdSondagem()
     {
-        return $this->idNomeSondagem;
+        return $this->idSondagem;
     }
 
     /**
      * @param mixed $idNomeSondagem
      */
-    public function setIdNomeSondagem($idNomeSondagem)
+    public function setIdSondagem($idSondagem)
     {
-        $this->idNomeSondagem = $idNomeSondagem;
+        $this->idNomeSondagem = $idSondagem;
     }
 
     /**

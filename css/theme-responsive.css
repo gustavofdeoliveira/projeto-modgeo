@@ -1,0 +1,115 @@
+/*NAV BAR RESPONSIVA*/
+@media only screen and (max-width:991px) {
+    .navbar-nav {
+        margin-left: unset;
+    }
+    .btn-projeto{
+        width: 40%;
+        margin-left: 30%;
+    }
+    .navbar-collapse{
+        background-color: #5798B2;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1100px) {
+    .navbar-nav {
+        margin-left: 20% !important;
+    }
+}
+
+@media only screen and (min-width:1101px) and (max-width:1200px) {
+    .navbar-nav {
+        margin-left: 27% !important;
+    }
+}
+
+@media only screen and (min-width:1201px) and (max-width:1300px) {
+    .navbar-nav {
+        margin-left: 35%;
+    }
+}
+
+@media only screen and (min-width:1301px) and (max-width:1400px) {
+    .navbar-nav {
+        margin-left: 40%;
+    }
+}
+
+@media only screen and (min-width:1401px) and (max-width:1500px) {
+    .navbar-nav {
+        margin-left: 45%;
+    }
+}
+
+@media only screen and (min-width:1501px) and (max-width:1600px) {
+    .navbar-nav {
+        margin-left: 49%;
+    }
+}
+
+@media only screen and (min-width:1601px) and (max-width:1700px) {
+    .navbar-nav {
+        margin-left: 52%;
+    }
+}
+
+@media only screen and (min-width:1801px) and (max-width:1900px) {
+    .navbar-nav {
+        margin-left: 58%;
+    }
+}
+@media only screen and (min-width:1901px) and (max-width:2000px) {
+    .navbar-nav{
+        margin-left: 60%;
+    }
+}
+@media only screen and (min-width:2001px) and (max-width:2100px) {
+    .navbar-nav{
+        margin-left: 62%;
+    }
+    
+}
+@media only screen and (min-width:2101px) and (max-width:2200px) {
+    .navbar-nav{
+        margin-left: 64%;
+    }
+    
+}
+@media only screen and (min-width:2201px) and (max-width:2300px) {
+    .navbar-nav{
+        margin-left: 66%;
+    }
+    
+}
+@media only screen and (min-width:2301px) and (max-width:2400px) {
+    .navbar-nav{
+        margin-left: 67%;
+    }
+    
+}
+@media only screen and (min-width:2401px) and (max-width:2500px) {
+    .navbar-nav{
+        margin-left: 69%;
+    }
+    
+}
+@media only screen and (min-width:2501px) and (max-width:2600px) {
+    .navbar-nav{
+        margin-left: 70%;
+    }
+}
+
+@media only screen and (min-width:2601px) and (max-width:2700px) {
+    .navbar-nav{
+        margin-left: 71%;
+    } 
+}
+
+/*mobile responsive*/
+
+@media only screen and (min-width:319px) and(max-width:374px) {
+    body{
+        width: 100% !important;
+    }
+}
