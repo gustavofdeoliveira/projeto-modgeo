@@ -1,6 +1,6 @@
 <?php
-session_start();
 include_once("../control/conexao.php");
+require_once("../dao/CadastroEmpresaDAO.php");
 ?>
 <!DOCTYPE html>
 <html lang="tt-br">
@@ -41,15 +41,18 @@ include_once("../control/conexao.php");
             </div>
             <div class="form-group">
                 <label for="responsavel"> Executado Por: </label>
+                <?php 
+                    $dao = new CadastroEmpresaDAO();
+                    $dados = $dao -> listarEmpresas();
+            
+                ?>
                 <select class="form-control" name="responsavel">
                     <option>Selecione</option>
-                    <?php
-                    $result_niveis_acessos = "SELECT * FROM empresa";
-                    $resultado_niveis_acesso = mysqli_query($con, $result_niveis_acessos);
-                    while ($row_niveis_acessos = mysqli_fetch_assoc($resultado_niveis_acesso)) { ?>
-                        <option value="<?php echo $row_niveis_acessos['nome']; ?>"><?php echo $row_niveis_acessos['nome']; ?></option> <?php
-                                                                                                                                            }
-                                                                                                                                                ?>
+                    <?php 
+                    foreach ($dados as $dado){
+                        echo "<option value='".$dado->id_empresa."'>".$dado->nome."</option>";
+                    } 
+                    ?>
                 </select>
             </div>
             <div class="form-group">

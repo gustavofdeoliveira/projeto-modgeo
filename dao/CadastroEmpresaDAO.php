@@ -13,15 +13,12 @@ class CadastroEmpresaDAO
     {
         $sql = "insert into empresa(nome,cnpj,cidade_origem,email,telefone) values('" . $modelo->getNome() . "','" . $modelo->getCnpj() . "','" . $modelo->getCidadeOrigem() . "','" . $modelo->getEmail() . "','" . $modelo->getTelefone() . "')";
         $this->conn->exec($sql);
-
-        /*$stmt = $this->conn->prepare($sql);
-
-       $stmt->execute(array(
-           ':nome' => $modelo->getNome(),
-           ':coord_x'=>$modelo->getCoordx(),
-           ':coord_x'=>$modelo->getCoordy(),
-           ':profundidade'=>$modelo->getProfundidade(),
-           ':cota'=>$modelo->getCota())
-       );*/
+    }
+    function listarEmpresas()
+    {
+        $sql = "SELECT * FROM empresa";
+        $query = $this->conn->query($sql);
+        $dados = $query->fetchAll(PDO::FETCH_OBJ);
+        return $dados;
     }
 }
