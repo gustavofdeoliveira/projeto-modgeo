@@ -4,7 +4,7 @@ class ParametrosSondagem{
     private $consistencia;
     private $fraturamento;
     private $rqd;
-    private $idSondagem;
+    private $idNomeSondagem;
 
     /**
      * @return mixed
@@ -73,16 +73,16 @@ class ParametrosSondagem{
     /**
      * @return mixed
      */
-    public function getIdSondagem()
+    public function getIdNomeSondagem()
     {
-        return $this->idSondagem;
+        return $this->idNomeSondagem;
     }
 
     /**
      * @param mixed $idSondagem
      */
-    public function setIdsondagem($idSondagem)
+    public function setIdNomeSondagem($idNomeSondagem)
     {
-        $this->idSondagem = $idSondagem;
+        $this->idNomeSondagem = $idNomeSondagem;
     }
 }

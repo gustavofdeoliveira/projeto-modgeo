@@ -1,51 +1,36 @@
-.navbar a,
-.sec-about p {
-  text-align: center;
-}
-.navbar a{
+.navbar{
+  width: 100%;
+  height: 70px;
   font-size: 21px;
   font-family: 'Open Sans';
+  position: fixed;
+  background-color: #3A6B7E!important;
+
 }
-.navbar .fa-external-link {
-  font-size: 10px; 
-}
-.container > h1 {
-  font-weight: 300;
+
+.navbar-light .navbar-nav .nav-link{
   text-align: center;
-  text-transform: uppercase;
+  color: #fff !important;
 }
 
-/*navbar*/
-.navbar-default .navbar-nav > li > a {
-  color: #fff;
-  margin-top: 5px;
-}
-.navbar-default {
-  background: #3A6B7E;
+
+.navbar-nav{
+  margin-left: 42%;
 }
 
-.navbar .fa-external-link {
-  vertical-align: top;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #000;
-}
-
-.navbar-default .navbar-nav > li > a:active {
-  color: #000;
-}
-.logo-nav{
-  margin-left: -50%;
-}
-
-.bottom-projeto {
+.btn-projeto {
   background-color:#8FBACC;
   border-radius: 50px ;
   height: 15px 5px 0px;
 }
 
+body{
+  width: 100%;
+}
+
+*, ::after, ::before{
+  box-sizing:unset;
+}
 /*Carrossel*/
 .carousel-indicators .active {
   width: 15px;

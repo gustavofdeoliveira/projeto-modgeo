@@ -1,8 +1,9 @@
 <?php
 session_start();
-require_once ("../control/Conexao.php");
+require_once("../control/Conexao.php");
 
-class TipoOcorrenciaSondagemDAO{
+class TipoOcorrenciaSondagemDAO
+{
     private $conn;
    function __construct()
    {

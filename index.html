@@ -9,17 +9,19 @@
   <link rel="shortcut icon" href="img/icon/logo-modgeo-favicon.ico" type="image/x-icon">
   <!-- Css style e JS do site-->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme-responsive.css">
   <script type="text/javascript" src="javascript/index.js"></script>
   <!-- Fonte do site-->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
   <!-- BoorStrap do site-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 
 <body>
   <header>
+<<<<<<< HEAD
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     
       <div class="container">
@@ -33,32 +35,53 @@
             <li><a class="bottom-projeto" href="./view/CadNomeSondagem.php">Gerar Projeto</a></li>
           </ul>
         </div>
+=======
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img src="img/icon/logo-modgeo-navbar.png" alt="Logo Modgeo 3.0"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Início</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Sobre o ModGeo 3.0</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Como usar o ModGeo 3.0</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link btn-projeto" href="#">Gerar Projeto</a>
+          </li>
+        </ul>
+>>>>>>> upstream/main
       </div>
     </nav>
   </header>
   
   <!-- partial:index.partial.html -->
-  <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators position">
-      <li data-target="#carousel" data-slide-to="0" class="active">
-      </li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Carousel items -->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="active item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
+      <div class="carousel-item active">
+        <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
+      </div>
     </div>
-    <!-- Carousel bottom -->
-    <a class="carousel-control left" href="#carousel" data-slide="prev">
-      <img class="bottom-left" src="img/icon/icon-carrossel-esquerda.png" alt="Anterior">
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
     </a>
-    <a class="carousel-control right" href="#carousel" data-slide="next">
-      <img class="bottom-right" src="img/icon/icon-carrossel-direita.png" alt="Próximo">
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
     </a>
-    
   </div>
   <!--//Primeiro slider//-->
   <div class="slider-one">
@@ -75,9 +98,9 @@
   </div>
 </div>
   <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js'></script>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 
