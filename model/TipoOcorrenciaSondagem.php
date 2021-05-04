@@ -4,15 +4,9 @@ class TipoOcorrenciaSondagem
     private $profMin;
     private $profMax;
     private $tipoRocha;
-    private $idNomeSondagem;
-<<<<<<< HEAD
-    private $profMin;
+    private $idNomeSondagem;    
     private $cor;
     private $hachuras;
-=======
-    private $hachuras;
-    private $cor;
->>>>>>> upstream/main
 
     /**
      * @return mixed
