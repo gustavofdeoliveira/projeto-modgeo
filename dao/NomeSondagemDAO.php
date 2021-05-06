@@ -29,4 +29,11 @@ class NomeSondagemDAO
         $this->conn->exec($sql);
         $_SESSION["id"] = $this->conn->lastInsertId();
     }
+    function listarSondagens()
+    {
+        $sql = "SELECT * FROM nome_sondagem";
+        $query = $this->conn->query($sql);
+        $dados = $query->fetchAll(PDO::FETCH_OBJ);
+        return $dados;
+    }
 }

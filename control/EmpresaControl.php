@@ -1,13 +1,13 @@
 <?php
-require_once "../dao/CadastroEmpresaDAO.php";
-require_once "../model/CadastroEmpresa.php";
-class CadastroEmpresaControl{
+require_once "../dao/EmpresaDAO.php";
+require_once "../model/Empresa.php";
+class EmpresaControl{
     private $dao;
     private $modelo;
     private $acao;
     function __construct(){
-        $this->dao=new CadastroEmpresaDAO();
-        $this->modelo=new CadastroEmpresa();
+        $this->dao=new EmpresaDAO();
+        $this->modelo=new Empresa();
         $this->acao=$_REQUEST["acao"];
         $this->verificaAcao();
     }
@@ -25,4 +25,4 @@ class CadastroEmpresaControl{
     }
 
 }
-new CadastroEmpresaControl();
+new EmpresaControl();

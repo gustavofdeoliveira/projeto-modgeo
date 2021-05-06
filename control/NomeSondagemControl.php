@@ -32,6 +32,11 @@ class NomeSondagemControl
                 $this->dao->inserir($this->modelo);
                 header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;
+            
+            case 2:
+                $_SESSION["id"] = $_GET['id_sondagem'];
+                header("Location:../view/SondagemOcorrenciaParametros.php");
+                break;
         }
     }
 }

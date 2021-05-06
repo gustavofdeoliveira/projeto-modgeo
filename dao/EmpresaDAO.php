@@ -2,14 +2,14 @@
 session_start();
 require_once("../control/Conexao.php");
 
-class CadastroEmpresaDAO
+class EmpresaDAO
 {
     private $conn;
     function __construct()
     {
         $this->conn = Conexao::conectar();
     }
-    function inserir(CadastroEmpresa $modelo)
+    function inserir(Empresa $modelo)
     {
         $sql = "insert into empresa(nome,cnpj,cidade_origem,email,telefone) values('" . $modelo->getNome() . "','" . $modelo->getCnpj() . "','" . $modelo->getCidadeOrigem() . "','" . $modelo->getEmail() . "','" . $modelo->getTelefone() . "')";
         $this->conn->exec($sql);
