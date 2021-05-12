@@ -36,7 +36,7 @@ require_once("../dao/TipoOcorrenciaSondagemDAO.php");
     <div class="well container">        
             <h1>Parâmetros da Sondagem: </h1>
             <?php
-            $dao = new ParametrosSondagemDAO();
+            $dao = new ParametrosSondagemDAO();            
             $dados = $dao->listarParametrosSondagem($_SESSION["id"]);
             ?>
             <?php
