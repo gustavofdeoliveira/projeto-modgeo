@@ -1,5 +1,5 @@
 <?php
-class cadastroEmpresa
+class Empresa
 {
     private $nome;
     private $cnpj;

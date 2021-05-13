@@ -1,6 +1,6 @@
 <?php
 include_once("../control/conexao.php");
-require_once("../dao/CadastroEmpresaDAO.php");
+require_once("../dao/EmpresaDAO.php");
 ?>
 <!DOCTYPE html>
 <html lang="tt-br">
@@ -42,7 +42,7 @@ require_once("../dao/CadastroEmpresaDAO.php");
             <div class="form-group">
                 <label for="responsavel"> Executado Por: </label>
                 <?php 
-                    $dao = new CadastroEmpresaDAO();
+                    $dao = new EmpresaDAO();
                     $dados = $dao -> listarEmpresas();
             
                 ?>

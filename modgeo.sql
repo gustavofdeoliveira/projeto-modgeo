@@ -1,13 +1,24 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
+<<<<<<< HEAD
+-- Tempo de geração: 25-Fev-2021 às 17:41
+-- Versão do servidor: 10.4.10-MariaDB
+-- versão do PHP: 7.2.26
+=======
+-- Tempo de geração: 25-Abr-2021 às 20:32
+=======
 -- Tempo de geração: 01-Maio-2021 às 22:05
+>>>>>>> upstream/main
 -- Versão do servidor: 10.4.17-MariaDB
 -- versão do PHP: 8.0.2
+>>>>>>> upstream/main
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,6 +35,8 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 -- Estrutura da tabela `empresa`
 --
 
@@ -47,25 +60,29 @@ INSERT INTO `empresa` (`id_empresa`, `nome`, `cnpj`, `cidade_origem`, `email`, `
 -- --------------------------------------------------------
 
 --
+>>>>>>> upstream/main
 -- Estrutura da tabela `nome_sondagem`
 --
 
 CREATE TABLE `nome_sondagem` (
   `id_sondagem` int(11) NOT NULL,
   `nome` varchar(15) NOT NULL,
+<<<<<<< HEAD
+=======
   `responsavel` varchar(150) NOT NULL,
   `inicio` date NOT NULL,
   `termino` date NOT NULL,
+>>>>>>> upstream/main
   `coord_x` float NOT NULL,
   `coord_y` float NOT NULL,
   `cota` float NOT NULL,
-  `direcao` varchar(5) NOT NULL,
   `profundidade` float NOT NULL,
   `inclinacao` float NOT NULL,
-  `georeferenciamento` float NOT NULL,
-  `comentario` text NOT NULL
+  `georeferenciamento` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
 --
 -- Extraindo dados da tabela `nome_sondagem`
 --
@@ -80,18 +97,21 @@ INSERT INTO `nome_sondagem` (`id_sondagem`, `nome`, `responsavel`, `inicio`, `te
 
 -- --------------------------------------------------------
 
+>>>>>>> upstream/main
 --
--- Estrutura da tabela `parametros_sondagem`
+-- Extraindo dados da tabela `nome_sondagem`
 --
 
-CREATE TABLE `parametros_sondagem` (
-  `id_parametros_sondagem` int(11) NOT NULL,
-  `alteracao` int(11) NOT NULL,
-  `consistencia` int(11) NOT NULL,
-  `fraturamento` int(11) NOT NULL,
-  `rqd` int(11) NOT NULL,
-  `id_sondagem` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `nome_sondagem` (`id_sondagem`, `nome`, `coord_x`, `coord_y`, `cota`, `profundidade`, `inclinacao`, `georeferenciamento`) VALUES
+(1, 'sondagem 1', 123, 123, 54, 123, 0, 0),
+(2, 'sondagem 1', 123, 123, 54, 123, 0, 0),
+(3, 'sondagem 12', 123455, 123545, 5455, 123545, 0, 0),
+(4, 'sondagem 1', 123, 123, 54, 123, 5, 6675),
+(5, 'sondagem 1', 123, 123, 54, 123, 5, 6675),
+(6, 'Sondagem teste', 1235, 11234, 97, 87, 90, 21343400),
+(7, 'Sondagem teste', 1235, 11234, 97, 87, 90, 21343400),
+(8, 'Sondagem teste', 1235, 11234, 97, 87, 90, 21343400),
+(9, 'Teste 2', 123, 21231, 12313, 1234, 13212, 12313);
 
 --
 -- Extraindo dados da tabela `parametros_sondagem`
@@ -105,6 +125,23 @@ INSERT INTO `parametros_sondagem` (`id_parametros_sondagem`, `alteracao`, `consi
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+-- Estrutura da tabela `tipo_rocha_sondagem`
+--
+
+<<<<<<< HEAD
+CREATE TABLE `tipo_rocha_sondagem` (
+  `id_tipo_rocha_sondagem` int(11) NOT NULL,
+=======
+CREATE TABLE `tipo_ocorrencia _sondagem` (
+  `id_tipo_ocorrencia_sondagem` int(11) NOT NULL,
+>>>>>>> upstream/main
+  `profundidade_min` float NOT NULL,
+  `profundidade_max` float NOT NULL,
+  `tipo_rocha` varchar(30) NOT NULL,
+  `id_sondagem` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+=======
 -- Estrutura da tabela `tipo_ocorrencia_sondagem`
 --
 
@@ -128,16 +165,19 @@ INSERT INTO `tipo_ocorrencia_sondagem` (`id_tipo_rocha_sondagem`, `profundidade_
 (13, 10, 40, 'Água', 24, 'asd', '#000000'),
 (15, 10, 40, 'Filito', 26, 'asd', '#000000'),
 (16, 10, 40, 'Diamictito', 27, 'asd', '#000000');
+>>>>>>> upstream/main
+
+--
+-- Extraindo dados da tabela `tipo_rocha_sondagem`
+--
+
+INSERT INTO `tipo_rocha_sondagem` (`id_tipo_rocha_sondagem`, `profundidade_min`, `profundidade_max`, `tipo_rocha`, `id_sondagem`) VALUES
+(1, 11, 11, 'Basalto', 9),
+(2, 11, 11, 'Basalto', 9);
 
 --
 -- Índices para tabelas despejadas
 --
-
---
--- Índices para tabela `empresa`
---
-ALTER TABLE `empresa`
-  ADD PRIMARY KEY (`id_empresa`);
 
 --
 -- Índices para tabela `nome_sondagem`
@@ -146,8 +186,12 @@ ALTER TABLE `nome_sondagem`
   ADD PRIMARY KEY (`id_sondagem`);
 
 --
--- Índices para tabela `parametros_sondagem`
+-- Índices para tabela `tipo_rocha_sondagem`
 --
+<<<<<<< HEAD
+ALTER TABLE `tipo_rocha_sondagem`
+  ADD PRIMARY KEY (`id_tipo_rocha_sondagem`),
+=======
 ALTER TABLE `parametros_sondagem`
   ADD PRIMARY KEY (`id_parametros_sondagem`),
   ADD KEY `id_sondagem` (`id_sondagem`);
@@ -155,8 +199,14 @@ ALTER TABLE `parametros_sondagem`
 --
 -- Índices para tabela `tipo_ocorrencia_sondagem`
 --
+<<<<<<< HEAD
+ALTER TABLE `tipo_ocorrencia _sondagem`
+  ADD PRIMARY KEY (`id_tipo_ocorrencia_sondagem`),
+>>>>>>> upstream/main
+=======
 ALTER TABLE `tipo_ocorrencia_sondagem`
   ADD PRIMARY KEY (`id_tipo_rocha_sondagem`),
+>>>>>>> upstream/main
   ADD KEY `id_sondagem` (`id_sondagem`);
 
 --
@@ -164,6 +214,12 @@ ALTER TABLE `tipo_ocorrencia_sondagem`
 --
 
 --
+<<<<<<< HEAD
+-- AUTO_INCREMENT de tabela `nome_sondagem`
+--
+ALTER TABLE `nome_sondagem`
+  MODIFY `id_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+=======
 -- AUTO_INCREMENT de tabela `empresa`
 --
 ALTER TABLE `empresa`
@@ -190,10 +246,15 @@ ALTER TABLE `tipo_ocorrencia_sondagem`
 --
 -- Restrições para despejos de tabelas
 --
+>>>>>>> upstream/main
 
 --
--- Limitadores para a tabela `parametros_sondagem`
+-- AUTO_INCREMENT de tabela `tipo_rocha_sondagem`
 --
+<<<<<<< HEAD
+ALTER TABLE `tipo_rocha_sondagem`
+  MODIFY `id_tipo_rocha_sondagem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+=======
 ALTER TABLE `parametros_sondagem`
   ADD CONSTRAINT `fk_id_sondagem` FOREIGN KEY (`id_sondagem`) REFERENCES `nome_sondagem` (`id_sondagem`);
 
@@ -202,6 +263,7 @@ ALTER TABLE `parametros_sondagem`
 --
 ALTER TABLE `tipo_ocorrencia_sondagem`
   ADD CONSTRAINT `id_sondagem` FOREIGN KEY (`id_sondagem`) REFERENCES `nome_sondagem` (`id_sondagem`);
+>>>>>>> upstream/main
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -19,6 +19,14 @@ class ParametrosSondagemDAO
             '" . $modelo->getRqd() . "',
             '" . $modelo->getIdNomeSondagem() . "'
         )";
+        echo($sql);        
             $this->conn->exec($sql);
+    }
+
+    function listarParametrosSondagem($id_sondagem){        
+        $sql = "SELECT * FROM parametros_sondagem WHERE id_sondagem = " . $id_sondagem .  "";
+        $query = $this->conn->query($sql);
+        $dados = $query->fetchAll(PDO::FETCH_OBJ);
+        return $dados;
     }
 }

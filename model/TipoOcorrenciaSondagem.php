@@ -4,9 +4,9 @@ class TipoOcorrenciaSondagem
     private $profMin;
     private $profMax;
     private $tipoRocha;
-    private $idNomeSondagem;
-    private $hachuras;
+    private $idNomeSondagem;    
     private $cor;
+    private $hachuras;
 
     /**
      * @return mixed
@@ -75,6 +75,22 @@ class TipoOcorrenciaSondagem
     /**
      * @return mixed
      */
+    public function getCor()
+    {
+        return $this->cor;
+    }
+
+    /**
+     * @param mixed $cor
+     */
+    public function setCor($cor)
+    {
+        $this->cor = $cor;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getHachuras()
     {
         return $this->hachuras;
@@ -88,19 +104,4 @@ class TipoOcorrenciaSondagem
         $this->hachuras = $hachuras;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCor()
-    {
-        return $this->cor;
-    }
-
-    /**
-     * @param mixed $cor
-     */
-    public function setCor($cor)
-    {
-        $this->cor = $cor;
-    }
 }

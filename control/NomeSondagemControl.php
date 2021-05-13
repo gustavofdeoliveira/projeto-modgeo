@@ -1,18 +1,21 @@
 <?php
 require_once "../dao/NomeSondagemDAO.php";
 require_once "../model/NomeSondagem.php";
-class NomeSondagemControl{
+class NomeSondagemControl
+{
     private $dao;
     private $modelo;
     private $acao;
-    function __construct(){
-        $this->dao=new NomeSondagemDAO();
-        $this->modelo=new NomeSondagem();
-        $this->acao=$_REQUEST["acao"];
+    function __construct()
+    {
+        $this->dao = new NomeSondagemDAO();
+        $this->modelo = new NomeSondagem();
+        $this->acao = $_REQUEST["acao"];
         $this->verificaAcao();
     }
-    function verificaAcao(){
-        switch ($this->acao){
+    function verificaAcao()
+    {
+        switch ($this->acao) {
             case 1:
                 $this->modelo->setNome($_POST["nome"]);
                 $this->modelo->setResponsavel($_POST["responsavel"]);
@@ -29,8 +32,12 @@ class NomeSondagemControl{
                 $this->dao->inserir($this->modelo);
                 header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;
+            
+            case 2:
+                $_SESSION["id"] = $_GET['id_sondagem'];
+                header("Location:../view/SondagemOcorrenciaParametros.php");
+                break;
         }
     }
-
 }
 new NomeSondagemControl();
