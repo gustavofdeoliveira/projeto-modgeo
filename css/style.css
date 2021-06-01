@@ -1,4 +1,24 @@
+:root {
+  --white: #FFFFFF;
+  --greyLight-2: #c8d0e7;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans';
+}
+
+html, .carousel, .carousel-inner, .carousel-inner .item {
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: unset;
+}
+
 /*navbar*/
+
 .navbar {
   width: 100%;
   height: 70px;
@@ -10,6 +30,7 @@
 .navbar-nav {
   margin-left: 42%;
 }
+
 .navbar-nav ul {
   padding: 30px;
 }
@@ -18,35 +39,18 @@
   text-align: center;
 }
 
-.navbar-light .navbar-nav .active>.nav-link{
+.navbar-light .navbar-nav .active>.nav-link {
   color: #fff !important;
 }
+
 .navbar-toggler-icon {
   background-color: #7eb444;
 }
-
-
 
 .btn-projeto {
   background-color: #8FBACC;
   border-radius: 50px;
   height: 15px 5px 0px;
-}
-
-
-/**/
-body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Open Sans';
-}
-
-html, body, .carousel, .carousel-inner, .carousel-inner .item {
-  height: 100%;
-}
-
-*, ::after, ::before {
-  box-sizing: unset;
 }
 
 /*Primeiro Slider*/
@@ -86,7 +90,8 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
 /*Terceiro slider*/
 
 .slider-three {
-  margin-top: -1.5%;
+  margin-top: 0;
+  display: flow-root;
   background-color: #f7f7ff;
   height: 100%;
 }
@@ -94,12 +99,18 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
 .title-three {
   color: #747474;
   font-weight: bold;
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  display: table;
+  position: relative;
 }
 
 .logo-position {
-  margin-top: 15%;
-  margin-left: 48%;
+  margin-top: 12%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .bottom-start {
@@ -109,18 +120,31 @@ html, body, .carousel, .carousel-inner, .carousel-inner .item {
   font-weight: bold;
   border-radius: 42px;
   border: 1px solid #8FBACC;
-  display: inline-block;
+  display: table;
   cursor: pointer;
   color: #ffffff;
   font-family: Arial;
   font-size: 23px;
   padding: 10px 80px;
   text-decoration: none;
-  margin-left: 42%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white) !important;
 }
 
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #747474;
+  font-weight: bold;
+  margin-bottom: auto;
+  background-color: #f7f7ff;
+  height: 35px;
+}
 
 /*Carrossel*/
+
 *, *:before, *:after {
   margin: 0;
   padding: 0;
@@ -134,7 +158,7 @@ html {
 }
 
 @media only screen and (min-width:1001px) and (max-width: 3000px) {
-  .container{
+  .container {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -151,7 +175,6 @@ body {
   background-color: #000;
   color: #fff;
 }
-
 
 .container {
   position: relative !important;

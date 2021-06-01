@@ -42,7 +42,7 @@ require_once("../dao/NomeSondagemDAO.php");
             foreach ($dados as $dado) {
                 echo "
                 <form action='../control/NomeSondagemControl.php' method='GET' class='form-group'>
-                    <h1> ". $dado -> nome . "<h1>    
+                    <h2> ". $dado -> nome . "<h2>    
                     <input type='hidden' name='id_sondagem' value='".$dado -> id_sondagem . "'>
                     <input type='hidden' name='acao' value='2'>
                     <input class='btn btn-success btn-lg' type='submit' value='Visualizar Ocorrencias'>                                    
