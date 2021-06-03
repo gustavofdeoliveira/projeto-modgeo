@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once("../control/Conexao.php");
 
 class TipoOcorrenciaSondagemDAO
@@ -16,5 +15,10 @@ class TipoOcorrenciaSondagemDAO
         $this->conn->exec($sql);
     }
 
-
+    function listarOcorrenciasSondagem($id_sondagem){        
+        $sql = "SELECT * FROM tipo_ocorrencia_sondagem";
+        $query = $this->conn->query($sql);
+        $dados = $query->fetchAll(PDO::FETCH_OBJ);
+        return $dados;
+    }
 }

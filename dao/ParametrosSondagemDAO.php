@@ -23,7 +23,7 @@ class ParametrosSondagemDAO
     }
 
     function listarParametrosSondagem($id_sondagem){        
-        $sql = "SELECT * FROM parametros_sondagem WHERE id_sondagem = " . $id_sondagem ."";
+        $sql = "SELECT * FROM parametros_sondagem";
         $query = $this->conn->query($sql);
         $dados = $query->fetchAll(PDO::FETCH_OBJ);
         return $dados;
