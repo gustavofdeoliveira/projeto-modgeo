@@ -55,6 +55,7 @@ include_once("../control/conexao.php");
             <input class="btn btn-success btn-lg" type="submit" value="Gravar">
 
         </form>
+        <a href="../index.html" class="btn btn-success btn-lg">Retornar ao menu inicial</a>
     </div>
 </body>
 <script type="text/javascript" src="../javascript/index.js"></script>

@@ -89,7 +89,7 @@ include_once("../control/conexao.php");
             <input type="hidden" name="acao" value="1">
             <input class="btn btn-success btn-lg" type="submit" value="Gravar">
 
-        </form>
+        </form>        
     </div>
 </body>
 <script type="text/javascript" src="../javascript/index.js"></script>

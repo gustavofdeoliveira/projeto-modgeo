@@ -1,5 +1,9 @@
 <?php
 require_once("../control/Conexao.php");
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 class TipoOcorrenciaSondagemDAO
 {
@@ -9,7 +13,7 @@ class TipoOcorrenciaSondagemDAO
         $this->conn = Conexao::conectar();
     }
     function inserir(TipoOcorrenciaSondagem $modelo)
-    {
+    {        
         $sql = "insert into tipo_ocorrencia_sondagem(profundidade_min, profundidade_max, tipo_rocha, id_sondagem,hachuras,cor)values('" . $modelo->getProfMin() . "','" . $modelo->getProfMax() . "','" . $modelo->getTipoRocha() . "','" .$modelo->getIdNomeSondagem() . "','" .        $modelo->getHachuras() . "','" .
             $modelo->getCor() . "')";
         $this->conn->exec($sql);
