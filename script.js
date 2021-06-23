@@ -1,7 +1,71 @@
+$(document).ready(function () {
+  debugger;
+  const $app = $('.app');
+  const $pageNav1 = $('.pages__item--1');
+  const $pageNav2 = $('.pages__item--2');
+  let animation = true;
+  let curSlide = 1;
+  let scrolledUp, nextSlide;
+
+  let pagination = function (slide, target) {
+    animation = true;
+    if (target === undefined) {
+      nextSlide = scrolledUp ? slide - 1 : slide + 1;
+    } else {
+      nextSlide = target;
+    }
+
+    $('.pages__item--' + nextSlide).addClass('page__item-active');
+    $('.pages__item--' + slide).removeClass('page__item-active');
+
+    $app.toggleClass('active');
+    setTimeout(function () {
+      animation = false;
+    }, 0);
+  };
+
+  let navigateDown = function () {
+    if (curSlide > 1) return;
+    scrolledUp = false;
+    pagination(curSlide);
+    curSlide++;
+  };
+
+  let navigateUp = function () {
+    if (curSlide === 1) return;
+    scrolledUp = true;
+    pagination(curSlide);
+    curSlide--;
+  };
+
+  setTimeout(function () {
+    $app.addClass('initial');
+  }, 1500);
+
+  setTimeout(function () {
+    animation = false;
+  }, 4500);
+
+  $(document).on('mousewheel DOMMouseScroll', function (e) {
+    var delta = e.originalEvent.wheelDelta;
+    if (animation) return;
+    if (delta > 0 || e.originalEvent.detail < 0) {
+      navigateUp();
+    } else {
+      navigateDown();
+    }
+  });
+
+  $(document).on("click", ".pages__item:not(.page__item-active)", function () {
+    if (animation) return;
+    let target = +$(this).attr('data-target');
+    pagination(curSlide, target);
+    curSlide = target;
+  });
+});
 
 const slider = document.querySelector(".slider")
-
-const trail = document.querySelector(".trail").querySelectorAll("div")
+const trail = document.querySelector(".trail").querySelectorAll(".page")
 
 let value = 0
 
@@ -54,7 +118,7 @@ const move = (S, T) => {
 const tl = gsap.timeline({defaults: {duration: 0.6, ease: "power2.inOut"}})
 tl.from(".bg", {x: "-100%", opacity: 0})
   .from("p", {opacity: 0}, "-=0.3")
-  .from("h1", {opacity: 0, y: "30px"}, "-=0.3")
+  .from(".title-carrossel", {opacity: 0, y: "30px"}, "-=0.3")
   .from("button", {opacity: 0, y: "-40px"}, "-=0.8")
 
 // function to restart animation
