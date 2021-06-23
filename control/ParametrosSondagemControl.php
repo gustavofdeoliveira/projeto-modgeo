@@ -20,6 +20,7 @@ class ParametrosSondagemControl{
                 $this->modelo->setRqd($_POST["rqd"]);
                 $this->modelo->setIdNomeSondagem($_SESSION["id"]);
                 $this->dao->inserir($this->modelo);
+                header("Location:../view/CadParametrosSondagem.php");               
                 break;
         }
     }

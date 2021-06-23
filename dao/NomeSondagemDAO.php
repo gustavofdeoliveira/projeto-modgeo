@@ -25,7 +25,7 @@ class NomeSondagemDAO
             '" . $modelo->getInclinacao() . "',
             '" . $modelo->getGeoreferenciamento() . "',
             '" . $modelo->getComentario() . "'
-        )";
+        )";        
         $this->conn->exec($sql);
         $_SESSION["id"] = $this->conn->lastInsertId();
     }

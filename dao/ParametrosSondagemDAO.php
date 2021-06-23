@@ -1,6 +1,9 @@
 <?php
-session_start();
 require_once("../control/Conexao.php");
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
 class ParametrosSondagemDAO
 {

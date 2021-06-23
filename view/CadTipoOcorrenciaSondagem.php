@@ -95,6 +95,7 @@ session_start();
       <input class="btn btn-success btn-lg" type="submit" value="Salvar">
 
     </form>
+    <a href="./CadParametrosSondagem.php" class="btn btn-success btn-lg">Cadastrar parâmetros da sondagem</a>
   </div>
 </body>
 

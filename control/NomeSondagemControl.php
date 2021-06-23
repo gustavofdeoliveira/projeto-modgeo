@@ -29,7 +29,7 @@ class NomeSondagemControl
                 $this->modelo->setInclinacao($_POST["inclinacao"]);
                 $this->modelo->setGeoreferenciamento($_POST["georeferenciamento"]);
                 $this->modelo->setComentario($_POST["comentario"]);
-                $this->dao->inserir($this->modelo);
+                $this->dao->inserir($this->modelo);                
                 header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;
             
