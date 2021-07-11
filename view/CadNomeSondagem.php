@@ -20,7 +20,7 @@ require_once("../dao/EmpresaDAO.php");
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <a href="#" class="logo-nav"><img src="img/icon/logo-modgeo-navbar.png" alt=""></a>
+                    <a href="#" class="logo-nav"><img src="../img/icon/1Icon-azul-navbar.png" alt="Logo Modgeo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse ">
