@@ -14,11 +14,11 @@ class EmpresaControl{
     function verificaAcao(){
         switch ($this->acao){
             case 1:
-                $this->modelo->setNome($_POST["nome"]);
-                $this->modelo->setCnpj($_POST["cnpj"]);
-                $this->modelo->setCidadeOrigem($_POST["cidadeOrigem"]);
-                $this->modelo->setEmail($_POST["email"]);
-                $this->modelo->setTelefone($_POST["telefone"]);
+                $this->modelo->setNmEmpresa($_POST["nmEmpresa"]);
+                $this->modelo->setNrCnpj($_POST["nrCnpj"]);
+                $this->modelo->setNmCidadeOrigem($_POST["nmCidadeOrigem"]);
+                $this->modelo->setNmEmail($_POST["nmEmail"]);
+                $this->modelo->setNrTelefone($_POST["nrTelefone"]);
                 $this->dao->inserir($this->modelo);
                 break;
         }

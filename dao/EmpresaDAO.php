@@ -12,7 +12,8 @@ class EmpresaDAO
     function inserir(Empresa $modelo)
     {
         
-        $sql = "insert into empresa(nome,cnpj,cidade_origem,email,telefone) values('" . $modelo->getNome() . "','" . $modelo->getCnpj() . "','" . $modelo->getCidadeOrigem() . "','" . $modelo->getEmail() . "','" . $modelo->getTelefone() . "')";
+        $sql = "insert into empresa(nmEmpresa,nrCnpj,nmCidadeOrigem,nmEmail, nrTelefone,dtInclusao) values('" . $modelo->getNmEmpresa() . "','" . $modelo->getNrCnpj() . "','" . $modelo->getNmCidadeOrigem() . "','" . $modelo->getNmEmail() . "','" . $modelo->getNrTelefone() . "', CURRENT_TIMESTAMP())";
+         $sql = mb_strtoupper($sql);
         $this->conn->exec($sql);
     }
     function listarEmpresas()

@@ -1,89 +1,89 @@
 <?php
 class Empresa
 {
-    private $nome;
-    private $cnpj;
-    private $cidadeOrigem;
-    private $email;
-    private $telefone;
+    private $nmEmpresa;
+    private $nrCnpj;
+    private $nmCidadeOrigem;
+    private $nmEmail;
+    private $nrTelefone;
     
     /**
      * @return mixed
      */
-    public function getNome()
+    public function getNmEmpresa()
     {
-        return $this->nome;
+        return $this->nmEmpresa;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setNome($nome)
+    public function setNmEmpresa($nmEmpresa)
     {
-        $this->nome = $nome;
+        $this->nmEmpresa = $nmEmpresa;
     }
 
     /**
      * @return mixed
      */
-    public function getCnpj()
+    public function getNrCnpj()
     {
-        return $this->cnpj;
+        return $this->nrCnpj;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setCnpj($cnpj)
+    public function setNrCnpj($nrCnpj)
     {
-        $this->cnpj = $cnpj;
+        $this->nrCnpj = $nrCnpj;
     }
 
     /**
      * @return mixed
      */
-    public function getCidadeOrigem()
+    public function getNmCidadeOrigem()
     {
-        return $this->cidadeOrigem;
+        return $this->nmCidadeOrigem;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setCidadeOrigem($cidadeOrigem)
+    public function setNmCidadeOrigem($nmCidadeOrigem)
     {
-        $this->cidadeOrigem = $cidadeOrigem;
+        $this->nmCidadeOrigem = $nmCidadeOrigem;
     }
 
     /**
      * @return mixed
      */
-    public function getEmail()
+    public function getNmEmail()
     {
-        return $this->email;
+        return $this->nmEmail;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setEmail($email)
+    public function setNmEmail($nmEmail)
     {
-        $this->email = $email;
+        $this->nmEmail = $nmEmail;
     }
 
     /**
      * @return mixed
      */
-    public function getTelefone()
+    public function getNrTelefone()
     {
-        return $this->telefone;
+        return $this->nrTelefone;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setTelefone($telefone)
+    public function setNrTelefone($nrTelefone)
     {
-        $this->telefone = $telefone;
+        $this->nrTelefone = $nrTelefone;
     }
 }
