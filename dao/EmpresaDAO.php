@@ -23,4 +23,11 @@ class EmpresaDAO
         $dados = $query->fetchAll(PDO::FETCH_OBJ);
         return $dados;
     }
+    function verificaCadastro()
+    {
+        $sql = "SELECT * FROM empresa WHERE nrCnpj = '' ";
+        $query = $this->conn->query($sql);
+        $dados = $query->fetchAll(PDO::FETCH_OBJ);
+        return $dados;
+    }
 }

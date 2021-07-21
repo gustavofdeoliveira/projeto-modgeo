@@ -53,5 +53,6 @@ require_once("../dao/NomeSondagemDAO.php");
     </div>
 </body>
 <script type="text/javascript" src="../javascript/index.js"></script>
+<script type="text/javascript" src="../javascript/controller.ajax"></script>
 
 </html>
