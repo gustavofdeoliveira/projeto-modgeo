@@ -1,9 +1,9 @@
-form{
+form {
     margin-top: 6%;
     margin-bottom: 10% !important;
 }
 
-.title-forms{
+.title-forms {
     text-align: center;
     margin-bottom: 5%;
 }
@@ -12,6 +12,7 @@ form input[type="submit"]:hover {
     letter-spacing: 0.5px;
     background: linear-gradient(to right, #4776E6, #8e54e9);
 }
+
 form input[type="submit"] {
     margin-top: 10%;
     padding: 0.4rem;
@@ -23,11 +24,40 @@ form input[type="submit"] {
     font-weight: 300;
     border-radius: 4px;
     transition: all 0.3s ease;
-    border-color:unset;
+    border-color: unset;
     height: 40px;
 }
 
-.container{
+.container {
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+input:focus~label, input:valid~label {
+    transform: translateY(-24px);
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+input~label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    color: rgba(255, 255, 255, 0.6);
+    transition: .4s;
+}
+
+.error {
+    color: red;
+}
+
+.input span.error {
+    display: flex;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.input span.error.active {
+    border: 1px solid red;
+    padding: 0.4em;
 }

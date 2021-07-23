@@ -52,19 +52,22 @@ include_once("../control/conexao.php");
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label class="form-label" for="nmEmpresa">Nome:</label>
-                                    <input class="form-control" type="text" name="nmEmpresa" placeholder="Digite o nome da empresa">
+                                    <input required class="form-control" type="text" name="nmEmpresa" placeholder="Digite o nome da empresa">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrCnpj">CNPJ:</label>
-                                    <input class="form-control" type="text" name="nrCnpj" id="nrCnpj" placeholder="00.000.000/0000-00">
+                                    <input required class="form-control" type="text" name="nrCnpj" id="nrCnpj" placeholder="00.000.000/0000-00">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nmCidadeOrigem">Cidade Origem:</label>
-                                    <input class="form-control" type="text" name="nmCidadeOrigem" placeholder="Digite a cidade de origem">
+                                    <input required class="form-control" type="text" name="nmCidadeOrigem" placeholder="Digite a cidade de origem">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                         </div>
@@ -72,13 +75,15 @@ include_once("../control/conexao.php");
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nmEmail">Email</label>
-                                    <input class="form-control" type="text" name="nmEmail" placeholder="Digite o email da empresa">
+                                    <input required class="form-control" type="email" name="nmEmail" placeholder="Digite o email da empresa">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrTelefone">Telefone:</label>
-                                    <input class="form-control" type="text" name="nrTelefone" id="nrTelefone" placeholder="(00) 0000-0000">
+                                    <input required class="form-control" type="text" name="nrTelefone" id="nrTelefone" placeholder="(00) 0000-0000">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                         </div>
