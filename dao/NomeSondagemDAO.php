@@ -11,21 +11,23 @@ class NomeSondagemDAO
     }
     function inserir(NomeSondagem $modelo)
     {
-        $sql = "INSERT INTO nome_sondagem(nome,responsavel,inicio,termino,coord_x,coord_y,cota,direcao,profundidade,inclinacao,georeferenciamento,comentario) 
+        $sql = "INSERT INTO nome_sondagem(nmSondagem,nmResponsavel,dtInicio,dtTermino,nrCoord_x,nrCoord_y,nrCota,nrDirecao,nrProfundidade,nrInclinacao,nrGeoreferenciamento,txtComentario,dtInclusao) 
         VALUES(
-            '" . $modelo->getNome() . "',
-            '" . $modelo->getResponsavel() . "',
-            '" . $modelo->getInicio() . "',
-            '" . $modelo->getTermino() . "',
-            '" . $modelo->getCoordx() . "',
-            '" . $modelo->getCoordy() . "',
-            '" . $modelo->getCota() . "',
-            '" . $modelo->getDirecao() . "',
-            '" . $modelo->getProfundidade() . "',
-            '" . $modelo->getInclinacao() . "',
-            '" . $modelo->getGeoreferenciamento() . "',
-            '" . $modelo->getComentario() . "'
-        )";        
+            '" . $modelo->getNmSondagem() . "',
+            '" . $modelo->getNmResponsavel() . "',
+            '" . $modelo->getDtInicio() . "',
+            '" . $modelo->getDtTermino() . "',
+            '" . $modelo->getNrCoordx() . "',
+            '" . $modelo->getNrCoordy() . "',
+            '" . $modelo->getNrCota() . "',
+            '" . $modelo->getNrDirecao() . "',
+            '" . $modelo->getNrProfundidade() . "',
+            '" . $modelo->getNrInclinacao() . "',
+            '" . $modelo->getNrGeoreferenciamento() . "',
+            '" . $modelo->getTxtComentario() . "',
+             CURRENT_TIMESTAMP()
+        )";   
+        $sql = mb_strtoupper($sql);     
         $this->conn->exec($sql);
         $_SESSION["id"] = $this->conn->lastInsertId();
     }

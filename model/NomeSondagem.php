@@ -1,208 +1,209 @@
 <?php
 class nomeSondagem
 {
-    private $nome;
-    private $responsavel;
-    private $inicio;
-    private $termino;
-    private $coordx;
-    private $coordy;
-    private $cota;
-    private $direcao;
-    private $profundidade;
-    private $inclinacao;
-    private $georeferenciamento;
-    private $comentario;
+    private $nmSondagem;
+    private $nmResponsavel;
+    private $dtInicio;
+    private $dtTermino;
+    private $nrCoordx;
+    private $nrCoordy;
+    private $nrCota;
+    private $nrDirecao;
+    private $nrProfundidade;
+    private $nrInclinacao;
+    private $nrGeoreferenciamento;
+    private $txtComentario;
 
     /**
      * @return mixed
      */
-    public function getNome()
+    public function getNmSondagem()
     {
-        return $this->nome;
+        return $this->nmSondagem;
     }
 
     /**
      * @param mixed $nome
      */
-    public function setNome($nome)
+    public function setNmSondagem($nmSondagem)
     {
-        $this->nome = $nome;
+        $this->nmSondagem = $nmSondagem;
     }
 
     /**
      * @return mixed
      */
-    public function getResponsavel()
+    public function getNmResponsavel()
     {
-        return $this->responsavel;
+        return $this->nmResponsavel;
     }
 
     /**
      * @param mixed $responsavel
      */
-    public function setResponsavel($responsavel)
+    public function setNmResponsavel($nmResponsavel)
     {
-        $this->responsavel = $responsavel;
+        $this->nmResponsavel = $nmResponsavel;
     }
 
     /**
      * @return mixed
      */
-    public function getInicio()
+    public function getDtInicio()
     {
-        return $this->inicio;
+        return $this->dtInicio;
     }
 
     /**
      * @param mixed $inico
      */
-    public function setInicio($inicio)
+    public function setDtInicio($dtInicio)
     {
-        $this->inicio = $inicio;
+        $this->dtInicio = $dtInicio;
     }
 
     /**
      * @return mixed
      */
-    public function getTermino()
+    public function getDtTermino()
     {
-        return $this->termino;
+        return $this->dtTermino;
     }
 
     /**
      * @param mixed $termino
      */
-    public function setTermino($termino)
+    public function setDtTermino($dtTermino)
     {
-        $this->termino = $termino;
+        $this->dtTermino = $dtTermino;
     }
 
     /**
      * @return mixed
      */
-    public function getCoordx()
+    public function getNrCoordx()
     {
-        return $this->coordx;
+        return $this->nrCoordx;
     }
 
     /**
      * @param mixed $coordx
      */
-    public function setCoordx($coordx)
+    public function setNrCoordx($nrCoordx)
     {
-        $this->coordx = $coordx;
+        $this->nrCoordx = $nrCoordx;
     }
 
     /**
      * @return mixed
      */
-    public function getCoordy()
+    public function getNrCoordy()
     {
-        return $this->coordy;
+        return $this->nrCoordy;
     }
 
     /**
      * @param mixed $coordy
      */
-    public function setCoordy($coordy)
+    public function setNrCoordy($nrCoordy)
     {
-        $this->coordy = $coordy;
+        $this->nrCoordy = $nrCoordy;
     }
 
     /**
      * @return mixed
      */
-    public function getCota()
+    public function getNrCota()
     {
-        return $this->cota;
+        return $this->nrCota;
     }
 
     /**
      * @param mixed $cota
      */
-    public function setCota($cota)
+    public function setNrCota($nrCota)
     {
-        $this->cota = $cota;
+        $this->nrCota = $nrCota;
     }
 
     /**
      * @return mixed
      */
-    public function getDirecao()
+    public function getNrDirecao()
     {
-        return $this->direcao;
+        return $this->nrDirecao;
     }
 
     /**
      * @param mixed $direcao
      */
-    public function setDirecao($direcao)
+    public function setNrDirecao($nrDirecao)
     {
-        $this->direcao = $direcao;
+        $this->nrDirecao = $nrDirecao;
     }
 
     /**
      * @return mixed
      */
-    public function getProfundidade()
+    public function getNrProfundidade()
     {
-        return $this->profundidade;
+        return $this->nrProfundidade;
     }
 
     /**
      * @param mixed $profundidade
      */
-    public function setProfundidade($profundidade)
+    public function setNrProfundidade($nrProfundidade)
     {
-        $this->profundidade = $profundidade;
+        $this->nrProfundidade = $nrProfundidade;
     }
 
     /**
      * @return mixed
      */
-    public function getInclinacao()
+    public function getNrInclinacao()
     {
-        return $this->inclinacao;
+        return $this->nrInclinacao;
     }
 
     /**
      * @param mixed $inclinacao
      */
-    public function setInclinacao($inclinacao)
+    public function setNrInclinacao($nrInclinacao)
     {
-        $this->inclinacao = $inclinacao;
+        $this->nrInclinacao = $nrInclinacao;
     }
 
     /**
      * @return mixed
      */
-    public function getGeoreferenciamento()
+    public function getNrGeoreferenciamento()
     {
-        return $this->georeferenciamento;
+        return $this->nrGeoreferenciamento;
+        ;
     }
 
     /**
      * @param mixed $georeferenciamento
      */
-    public function setGeoreferenciamento($georeferenciamento)
+    public function setNrGeoreferenciamento($nrGeoreferenciamento)
     {
-        $this->georeferenciamento = $georeferenciamento;
+        $this->nrGeoreferenciamento = $nrGeoreferenciamento;
     }
 
     /**
      * @return mixed
      */
-    public function getComentario()
+    public function getTxtComentario()
     {
-        return $this->comentario;
+        return $this->txtComentario;
     }
 
     /**
      * @param mixed $comentario
      */
-    public function setComentario($comentario)
+    public function setTxtComentario($txtComentario)
     {
-        $this->comentario = $comentario;
+        $this->txtComentario = $txtComentario;
     }
 }

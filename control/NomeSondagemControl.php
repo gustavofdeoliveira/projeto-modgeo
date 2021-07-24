@@ -17,18 +17,18 @@ class NomeSondagemControl
     {
         switch ($this->acao) {
             case 1:
-                $this->modelo->setNome($_POST["nome"]);
-                $this->modelo->setResponsavel($_POST["responsavel"]);
-                $this->modelo->setInicio($_POST["inicio"]);
-                $this->modelo->setTermino($_POST["termino"]);
-                $this->modelo->setCoordx($_POST["coordx"]);
-                $this->modelo->setCoordy($_POST["coordy"]);
-                $this->modelo->setCota($_POST["cota"]);
-                $this->modelo->setDirecao($_POST["direcao"]);
-                $this->modelo->setProfundidade($_POST["profundidade"]);
-                $this->modelo->setInclinacao($_POST["inclinacao"]);
-                $this->modelo->setGeoreferenciamento($_POST["georeferenciamento"]);
-                $this->modelo->setComentario($_POST["comentario"]);
+                $this->modelo->setNmSondagem($_POST["nmSondagem"]);
+                $this->modelo->setNmResponsavel($_POST["nmResponsavel"]);
+                $this->modelo->setDtInicio($_POST["dtInicio"]);
+                $this->modelo->setDtTermino($_POST["dtTermino"]);
+                $this->modelo->setNrCoordx($_POST["nrCoordx"]);
+                $this->modelo->setNrCoordy($_POST["nrCoordy"]);
+                $this->modelo->setNrCota($_POST["nrCota"]);
+                $this->modelo->setNrDirecao($_POST["nrDirecao"]);
+                $this->modelo->setNrProfundidade($_POST["nrProfundidade"]);
+                $this->modelo->setNrInclinacao($_POST["nrInclinacao"]);
+                $this->modelo->setNrGeoreferenciamento($_POST["nrGeoreferenciamento"]);
+                $this->modelo->setTxtComentario($_POST["txtComentario"]);
                 $this->dao->inserir($this->modelo);                
                 header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;

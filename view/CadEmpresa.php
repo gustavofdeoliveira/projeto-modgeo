@@ -96,7 +96,6 @@ include_once("../control/conexao.php");
     </main>
 </body>
 
-<script type="text/javascript" src="../javascript/nav.js"></script>
 <script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
 <script type="text/javascript" src="../javascript/script.js"></script>
 
