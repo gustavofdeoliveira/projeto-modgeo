@@ -62,7 +62,7 @@ require_once("../dao/EmpresaDAO.php");
                                     $dao = new EmpresaDAO();
                                     $dados = $dao->listarEmpresas();
                                     ?>
-                                    <select required class="form-control" name="nmResponsavel">
+                                    <select required id="nmResponsavel" type="text" class="form-control" name="nmResponsavel">
                                         <option>Selecione</option>
                                         <?php
                                         foreach ($dados as $dado) {
