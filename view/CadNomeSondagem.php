@@ -156,9 +156,8 @@ require_once("../dao/EmpresaDAO.php");
                             <label for="txtComentario">Comentário:</label>
                             <textarea class="form-control" rows="3" name="txtComentario"></textarea>
                         </div>
-
                         <input type="hidden" name="acao" value="1">
-                        <input class="btn btn-success btn-lg" type="submit" value="Salvar">
+                        <input class="btn btn-success btn-lg" type="submit" value="Próximo">
                     </div>
                 </div>
             </form>

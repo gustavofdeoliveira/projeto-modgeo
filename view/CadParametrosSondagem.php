@@ -6,58 +6,85 @@ include_once("../control/conexao.php");
 <html lang="tt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <link rel="shortcut icon" href="img/icon/logo-modgeo-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'><!-- fonte do site-->
-    <link rel="stylesheet" href="../css/index.css">
-    <title>Cadastro de Sondagens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- fonte do site-->
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/forms-style.css">
+    <title>Cadastro Parâmetros Sondagem</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="#" class="logo-nav"><img src="img/icon/logo-modgeo-navbar.png" alt=""></a>
-                </div>
-
-                <div class="collapse navbar-collapse ">
-                    <ul class="nav navbar-nav navbar-right navbar">
-                        <li><a href="#home">Sobre o ModGeo 3.0</a></li>
-                        <li><a href="#about">Como usar o ModGeo 3.0</a></li>
-                    </ul>
-                </div>
+        <nav>
+            <div class="logo">
+                <!-- <img src="img/icon/icon-azul-navbar.png"> -->
+                <img src="../image/icon/icon-azul-navbar.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="index.html">SOBRE</a></li>
+                <li><a href="index.html">GUIA</a></li>
+                <li><a href="index.html">COMEÇAR</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </nav>
     </header>
-    <div class="well container">
-        <form action="../control/ParametrosSondagemControl.php" method="POST" class="form-group">
-
-            <div class="form-group">
-                <label class="form-label" for="alteracao">Alteração:</label>
-                <input class="form-control" type="text" name="alteracao">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="consistencia">Consistecia:</label>
-                <input class="form-control" type="text" name="consistencia">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="fraturamento">Fraturamento:</label>
-                <input class="form-control" type="text" name="fraturamento">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="rqd">RQD:</label>
-                <input class="form-control" type="text" name="rqd">
-            </div>
-            <input type="hidden" name="acao" value="1">
-            <input class="btn btn-success btn-lg" type="submit" value="Gravar">
-
-        </form>
-        <a href="../index.html" class="btn btn-success btn-lg">Retornar ao menu inicial</a>
-    </div>
+    <main>
+        <div class="well container col-lg-6 col-lg-offset-3">
+            <form action="../control/ParametrosSondagemControl.php" method="POST" class="form-group">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="title-forms">Cadastrar Parâmetros Sondagem</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="alteracao">Alteração:</label>
+                                    <input class="form-control" type="text" name="alteracao">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="consistencia">Consistecia:</label>
+                                    <input class="form-control" type="text" name="consistencia">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="fraturamento">Fraturamento:</label>
+                                    <input class="form-control" type="text" name="fraturamento">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-label" for="rqd">RQD:</label>
+                                    <input class="form-control" type="text" name="rqd">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="acao" value="1">
+                        <input class="btn btn-success btn-lg" type="submit" value="Salvar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
-<script type="text/javascript" src="../javascript/index.js"></script>
+<script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
+<script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
+<script type="text/javascript" src="../javascript/script.js"></script>
 
 </html>

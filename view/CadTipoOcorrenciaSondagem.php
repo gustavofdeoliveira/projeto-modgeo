@@ -85,7 +85,7 @@ session_start();
               </div>
             </div>
             <input type="hidden" name="acao" value="1">
-            <input class="btn btn-success btn-lg" type="submit" value="Salvar">
+            <input class="btn btn-success btn-lg" type="submit" value="Próximo">
           </div>
         </div>
       </form>
