@@ -3,7 +3,7 @@ session_start();
 include_once("../control/conexao.php");
 ?>
 <!DOCTYPE html>
-<html lang="tt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -56,17 +56,24 @@ include_once("../control/conexao.php");
                                     <span class="error"></span>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label class="form-label" for="nrCnpj">CNPJ:</label>
                                     <input required class="form-control" type="text" name="nrCnpj" id="nrCnpj" placeholder="00.000.000/0000-00">
                                     <span class="error"></span>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-label" for="nmEstadoOrigem">Estado Origem:</label>
+                                    <select class="form-control" type="text" id="Estado" name="nmEstadoOrigem"></select>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label class="form-label" for="nmCidadeOrigem">Cidade Origem:</label>
-                                    <input required class="form-control" type="text" name="nmCidadeOrigem" placeholder="Digite a cidade de origem">
+                                    <select  class="form-control" type="text" id="Cidade" name="nmCidadeOrigem"></select>
                                     <span class="error"></span>
                                 </div>
                             </div>
@@ -97,7 +104,7 @@ include_once("../control/conexao.php");
 </body>
 
 <script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
+<script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
 <script type="text/javascript" src="../javascript/script.js"></script>
-
 
 </html>
