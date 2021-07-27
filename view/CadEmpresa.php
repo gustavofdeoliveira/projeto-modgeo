@@ -12,7 +12,6 @@ include_once("../control/conexao.php");
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- fonte do site-->
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/forms-style.css">
     <title>Cadastro de Empresas</title>

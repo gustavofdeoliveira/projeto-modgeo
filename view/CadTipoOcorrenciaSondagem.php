@@ -50,13 +50,15 @@ session_start();
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="profMin"> Prof.Mínima </label>
-                  <input class="form-control" type="text" name="profMin">
+                  <input required class="form-control" type="text" name="profMin">
+                  <span class="error"></span>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="profMax"> Prof.Máxima </label>
-                  <input class="form-control" type="text" name="profMax">
+                  <input required class="form-control" type="text" name="profMax">
+                  <span class="error"></span>
                 </div>
               </div>
             </div>
@@ -67,12 +69,14 @@ session_start();
                   <select class="form-control" id="tipoRocha" name="tipoRocha">
                     <option name="">Selecionar</option>
                   </select>
+                  <span class="error"></span>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="hachuras"> Hachuras:</label>
-                  <input class="form-control" type="text"  name="hachuras">
+                  <input required class="form-control" type="text" name="hachuras">
+                  <span class="error"></span>
                 </div>
               </div>
             </div>
@@ -80,7 +84,8 @@ session_start();
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="cor"> Cor:</label>
-                  <input class="form-control" type="color" name="cor">
+                  <input required class="form-control" type="color" name="cor">
+                  <span class="error"></span>
                 </div>
               </div>
             </div>
