@@ -50,28 +50,32 @@ include_once("../control/conexao.php");
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" for="alteracao">Alteração:</label>
-                                    <input class="form-control" type="text" name="alteracao">
+                                    <label class="form-label" for="nrAlteracao">Alteração:</label>
+                                    <input required class="form-control" type="text" name="nrAlteracao" onkeypress="return isNumber(event)">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" for="consistencia">Consistecia:</label>
-                                    <input class="form-control" type="text" name="consistencia">
+                                    <label class="form-label" for="nrConsistencia">Consistecia:</label>
+                                    <input required class="form-control" type="text" name="nrConsistencia" onkeypress="return isNumber(event)">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" for="fraturamento">Fraturamento:</label>
-                                    <input class="form-control" type="text" name="fraturamento">
+                                    <label class="form-label" for="nrFraturamento">Fraturamento:</label>
+                                    <input required class="form-control" type="text" name="nrFraturamento" onkeypress="return isNumber(event)">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-label" for="rqd">RQD:</label>
-                                    <input class="form-control" type="text" name="rqd">
+                                    <label class="form-label" for="nrRqd">RQD:</label>
+                                    <input required class="form-control" type="text" name="nrRqd" onkeypress="return isNumber(event)">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                         </div>

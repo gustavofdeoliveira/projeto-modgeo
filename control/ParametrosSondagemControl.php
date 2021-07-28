@@ -14,10 +14,10 @@ class ParametrosSondagemControl{
     function verificaAcao(){
         switch ($this->acao){
             case 1:
-                $this->modelo->setAlteracao($_POST["alteracao"]);
-                $this->modelo->setConsistencia($_POST["consistencia"]);
-                $this->modelo->setFraturamento($_POST["fraturamento"]);
-                $this->modelo->setRqd($_POST["rqd"]);
+                $this->modelo->setNrAlteracao($_POST["nrAlteracao"]);
+                $this->modelo->setNrConsistencia($_POST["nrConsistencia"]);
+                $this->modelo->setNrFraturamento($_POST["nrFraturamento"]);
+                $this->modelo->setNrRqd($_POST["nrRqd"]);
                 $this->modelo->setIdNomeSondagem($_SESSION["id"]);
                 $this->dao->inserir($this->modelo);
                 header("Location:../view/CadParametrosSondagem.php");               

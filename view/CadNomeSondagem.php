@@ -3,7 +3,7 @@ include_once("../control/conexao.php");
 require_once("../dao/EmpresaDAO.php");
 ?>
 <!DOCTYPE html>
-<html lang="tt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -99,14 +99,14 @@ require_once("../dao/EmpresaDAO.php");
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrCoordx">Coordenada X:</label>
-                                    <input required class="form-control" type="text" name="nrCoordx" placeholder="Digite a coordenada X">
+                                    <input required class="form-control" type="text" name="nrCoordx" placeholder="Digite a coordenada X" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrCoordy">Coordenada Y:</label>
-                                    <input required class="form-control" type="text" name="nrCoordy" placeholder="Digite a coordenada Y">
+                                    <input required class="form-control" type="text" name="nrCoordy" placeholder="Digite a coordenada Y" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
@@ -115,14 +115,14 @@ require_once("../dao/EmpresaDAO.php");
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrCota">Cota:</label>
-                                    <input required class="form-control" type="text" name="nrCota" placeholder="Digite a cota">
+                                    <input required class="form-control" type="text" name="nrCota" placeholder="Digite a cota" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrDirecao">Direção:</label>
-                                    <input required class="form-control" type="text" name="nrDirecao" placeholder="Digite a direção">
+                                    <input required class="form-control" type="text" name="nrDirecao" placeholder="Digite a direção" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
@@ -131,14 +131,14 @@ require_once("../dao/EmpresaDAO.php");
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrProfundidade">Profundidade:</label>
-                                    <input required class="form-control" type="text" name="nrProfundidade" placeholder="Digite a profundidade">
+                                    <input required class="form-control" type="text" name="nrProfundidade" placeholder="Digite a profundidade" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-label" for="nrInclinacao">Inclinação:</label>
-                                    <input required class="form-control" type="text" name="nrInclinacao" placeholder="Digite a inclinação">
+                                    <input required class="form-control" type="text" name="nrInclinacao" placeholder="Digite a inclinação" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@ require_once("../dao/EmpresaDAO.php");
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label class="form-label" for="nrGeoreferenciamento">Georeferenciamento:</label>
-                                    <input required class="form-control" type="text" name="nrGeoreferenciamento" placeholder="Digite o georeferenciamento">
+                                    <input required class="form-control" type="text" name="nrGeoreferenciamento" placeholder="Digite o georeferenciamento" onkeypress="return isNumber(event)">
                                     <span class="error"></span>
                                 </div>
                             </div>

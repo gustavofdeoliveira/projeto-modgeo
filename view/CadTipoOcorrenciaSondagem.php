@@ -49,15 +49,15 @@ session_start();
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="profMin"> Prof.Mínima </label>
-                  <input required class="form-control" type="text" name="profMin">
+                  <label for="nrProfundidadeMin"> Prof.Mínima </label>
+                  <input required class="form-control" type="text" name="nrProfundidadeMin" onkeypress="return isNumber(event)">
                   <span class="error"></span>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="profMax"> Prof.Máxima </label>
-                  <input required class="form-control" type="text" name="profMax">
+                  <label for="nrProfundidadeMax"> Prof.Máxima </label>
+                  <input required class="form-control" type="text" name="nrProfundidadeMax" onkeypress="return isNumber(event)">
                   <span class="error"></span>
                 </div>
               </div>
@@ -65,26 +65,34 @@ session_start();
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="tipoRocha"> Tipo de Rocha </label>
-                  <select class="form-control" id="tipoRocha" name="tipoRocha">
-                    <option name="">Selecionar</option>
+                  <label for="nrTipoRocha"> Tipo de Rocha </label>
+                  <select class="form-control" id="tipoRocha" name="nmTipoRocha">
+                    <option>Selecionar</option>
                   </select>
                   <span class="error"></span>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="hachuras"> Hachuras:</label>
+                  <!-- <label for="hachuras"> Hachuras:</label>
                   <input required class="form-control" type="text" name="hachuras">
                   <span class="error"></span>
+                </div> -->
+                  <div class="dropdown">
+                    <span>Mouse over me</span>
+                    <div class="dropdown-content">
+                      <p>Hello World!</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
             <div class="row">
               <div class="col-lg-12">
                 <div class="form-group">
-                  <label for="cor"> Cor:</label>
-                  <input required class="form-control" type="color" name="cor">
+                  <label for="nrCor"> Cor:</label>
+                  <input required class="form-control" type="color" name="nmCor">
                   <span class="error"></span>
                 </div>
               </div>
@@ -97,8 +105,10 @@ session_start();
     </div>
   </main>
 </body>
+
 <script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
 <script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
 <script type="text/javascript" src="../javascript/script.js"></script>
+
 
 </html>

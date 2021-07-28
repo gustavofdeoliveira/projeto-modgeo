@@ -1,59 +1,59 @@
 <?php
 class TipoOcorrenciaSondagem
 {
-    private $profMin;
-    private $profMax;
-    private $tipoRocha;
+    private $nrProfundidadeMin;
+    private $nrProfundidadeMax;
+    private $nmTipoRocha;
     private $idNomeSondagem;
-    private $hachuras;
-    private $cor;
+    private $nmHachuras;
+    private $nmCor;
 
     /**
      * @return mixed
      */
-    public function getProfMin()
+    public function getNrProfundidadeMin()
     {
-        return $this->profMin;
+        return $this->nrProfundidadeMin;
     }
 
     /**
      * @param mixed $profMin
      */
-    public function setProfMin($profMin)
+    public function setNrProfundidadeMin($nrProfundidadeMin)
     {
-        $this->profMin = $profMin;
+        $this->nrProfundidadeMin = $nrProfundidadeMin;
     }
 
     /**
      * @return mixed
      */
-    public function getProfMax()
+    public function getNrProfundidadeMax()
     {
-        return $this->profMax;
+        return $this->nrProfundidadeMax;
     }
 
     /**
      * @param mixed $profMax
      */
-    public function setProfMax($profMax)
+    public function setNrProfundidadeMax($nrProfundidadeMax)
     {
-        $this->profMax = $profMax;
+        $this->nrProfundidadeMax = $nrProfundidadeMax;
     }
 
     /**
      * @return mixed
      */
-    public function getTipoRocha()
+    public function getNmTipoRocha()
     {
-        return $this->tipoRocha;
+        return $this->nmTipoRocha;
     }
 
     /**
      * @param mixed $tipoRocha
      */
-    public function setTipoRocha($tipoRocha)
+    public function setNmTipoRocha($nmTipoRocha)
     {
-        $this->tipoRocha = $tipoRocha;
+        $this->nmTipoRocha = $nmTipoRocha;
     }
 
     /**
@@ -75,32 +75,32 @@ class TipoOcorrenciaSondagem
     /**
      * @return mixed
      */
-    public function getHachuras()
+    public function getNmHachuras()
     {
-        return $this->hachuras;
+        return $this->nmHachuras;
     }
 
     /**
      * @param mixed $hachuras
      */
-    public function setHachuras($hachuras)
+    public function setNmHachuras($nmHachuras)
     {
-        $this->hachuras = $hachuras;
+        $this->nmHachuras = $nmHachuras;
     }
 
     /**
      * @return mixed
      */
-    public function getCor()
+    public function getNmCor()
     {
-        return $this->cor;
+        return $this->nmCor;
     }
 
     /**
      * @param mixed $cor
      */
-    public function setCor($cor)
+    public function setNmCor($nmCor)
     {
-        $this->cor = $cor;
+        $this->nmCor = $nmCor;
     }
 }

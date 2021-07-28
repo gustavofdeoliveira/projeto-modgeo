@@ -140,7 +140,7 @@ document.querySelector("form")
 $(document).ready(function () {
     carregar_json('tipoRocha');
 
-    function carregar_json(id, cidade_id) {
+    function carregar_json() {
         var html = '';
         var tiposRocha = {
             'rocha': [
@@ -203,13 +203,13 @@ $(document).ready(function(){
             console.log(data);
             if(id == 'Estado' && cidade_id == null){
                 for(var i = 0; i < data.estados.length; i++){
-                    html += '<option value='+ data.estados[i].sigla +'>'+ data.estados[i].nome+'</option>';
+                    html += '<option value='+ data.estados[i].nome +'>'+ data.estados[i].nome+'</option>';
                 }
             }else{
                 for(var i = 0; i < data.estados.length; i++){
                     if(data.estados[i].sigla == cidade_id){
                         for(var j = 0; j < data.estados[i].cidades.length; j++){
-                            html += '<option value='+ data.estados[i].sigla +'>'+data.estados[i].cidades[j]+ '</option>';
+                            html += '<option value='+ data.estados[i].cidades +'>'+data.estados[i].cidades[j]+ '</option>';
                         }
                     }
                 }

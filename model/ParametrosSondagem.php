@@ -1,73 +1,73 @@
 <?php 
 class ParametrosSondagem{
-    private $alteracao;
-    private $consistencia;
-    private $fraturamento;
-    private $rqd;
+    private $nrAlteracao;
+    private $nrConsistencia;
+    private $nrFraturamento;
+    private $nrRqd;
     private $idNomeSondagem;
 
     /**
      * @return mixed
      */
-    public function getAlteracao()
+    public function getNrAlteracao()
     {
-        return $this->alteracao;
+        return $this->nrAlteracao;
     }
 
     /**
      * @param mixed $alteracao
      */
-    public function setAlteracao($alteracao)
+    public function setNrAlteracao($nrAlteracao)
     {
-        $this->alteracao = $alteracao;
+        $this->nrAlteracao = $nrAlteracao;
     }
 
     /**
      * @return mixed
      */
-    public function getConsistencia()
+    public function getNrConsistencia()
     {
-        return $this->consistencia;
+        return $this->nrConsistencia;
     }
 
     /**
      * @param mixed $consistecia
      */
-    public function setConsistencia($consistencia)
+    public function setNrConsistencia($nrConsistencia)
     {
-        $this->consistencia = $consistencia;
+        $this->nrConsistencia = $nrConsistencia;
     }
 
     /**
      * @return mixed
      */
-    public function getFraturamento()
+    public function getNrFraturamento()
     {
-        return $this->fraturamento;
+        return $this->nrFraturamento;
     }
 
     /**
      * @param mixed $fraturamento
      */
-    public function setFraturamento($fraturamento)
+    public function setNrFraturamento($nrFraturamento)
     {
-        $this->fraturamento = $fraturamento;
+        $this->nrFraturamento = $nrFraturamento;
     }
 
     /**
      * @return mixed
      */
-    public function getRqd()
+    public function getNrRqd()
     {
-        return $this->rqd;
+        return $this->nrRqd;
     }
 
     /**
      * @param mixed $rqd
      */
-    public function setRqd($rqd)
+    public function setNrRqd($nrRqd)
     {
-        $this->rqd = $rqd;
+        $this->nrRqd = $nrRqd;
     }
 
     /**

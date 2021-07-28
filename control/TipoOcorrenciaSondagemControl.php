@@ -14,12 +14,12 @@ class TipoOcorrenciaSondagemControl{
     function verificaAcao(){
         switch ($this->acao){
             case 1:                
-                $this->modelo->setProfMin($_POST["profMin"]);
-                $this->modelo->setProfMax($_POST["profMax"]);
-                $this->modelo->setTipoRocha($_POST["tipoRocha"]);
+                $this->modelo->setNrProfundidadeMin($_POST["nrProfundidadeMin"]);
+                $this->modelo->setNrProfundidadeMax($_POST["nrProfundidadeMax"]);
+                $this->modelo->setNmTipoRocha($_POST["nmTipoRocha"]);
                 $this->modelo->setIdNomeSondagem($_SESSION["id"]);
-                $this->modelo->setHachuras($_POST["hachuras"]);
-                $this->modelo->setCor($_POST["cor"]);
+                $this->modelo->setNmHachuras($_POST["nmHachuras"]);
+                $this->modelo->setNmCor($_POST["nmCor"]);
                 $this->dao->inserir($this->modelo);
                 header("Location:../view/CadTipoOcorrenciaSondagem.php");
                 break;
