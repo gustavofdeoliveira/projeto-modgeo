@@ -21,7 +21,7 @@ class TipoOcorrenciaSondagemControl{
                 $this->modelo->setNmHachuras($_POST["nmHachuras"]);
                 $this->modelo->setNmCor($_POST["nmCor"]);
                 $this->dao->inserir($this->modelo);
-                header("Location:../view/CadTipoOcorrenciaSondagem.php");
+                header("Location:../view/CadParametrosSondagem.php");
                 break;
         }
     }

@@ -199,7 +199,7 @@ $(document).ready(function(){
         var html = '';
 
         $.getJSON('https://gist.githubusercontent.com/letanure/3012978/raw/36fc21d9e2fc45c078e0e0e07cce3c81965db8f9/estados-cidades.json', function(data){
-            html += '<option>Selecionar '+ id +'</option>';
+            html += '<option>Selecionar '+'</option>';
             console.log(data);
             if(id == 'Estado' && cidade_id == null){
                 for(var i = 0; i < data.estados.length; i++){
@@ -209,7 +209,7 @@ $(document).ready(function(){
                 for(var i = 0; i < data.estados.length; i++){
                     if(data.estados[i].sigla == cidade_id){
                         for(var j = 0; j < data.estados[i].cidades.length; j++){
-                            html += '<option value='+ data.estados[i].cidades +'>'+data.estados[i].cidades[j]+ '</option>';
+                            html += '<option value='+ data.estados[i].cidades[j] +'>'+data.estados[i].cidades[j]+ '</option>';
                         }
                     }
                 }

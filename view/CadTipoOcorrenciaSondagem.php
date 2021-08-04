@@ -49,14 +49,14 @@ session_start();
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="nrProfundidadeMin"> Prof.Mínima </label>
+                  <label for="nrProfundidadeMin"> Prof.Mínima: </label>
                   <input required class="form-control" type="text" name="nrProfundidadeMin" onkeypress="return isNumber(event)">
                   <span class="error"></span>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="nrProfundidadeMax"> Prof.Máxima </label>
+                  <label for="nrProfundidadeMax"> Prof.Máxima: </label>
                   <input required class="form-control" type="text" name="nrProfundidadeMax" onkeypress="return isNumber(event)">
                   <span class="error"></span>
                 </div>
@@ -65,7 +65,7 @@ session_start();
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="nrTipoRocha"> Tipo de Rocha </label>
+                  <label for="nrTipoRocha"> Tipo de Rocha:</label>
                   <select class="form-control" id="tipoRocha" name="nmTipoRocha">
                     <option>Selecionar</option>
                   </select>
@@ -78,10 +78,36 @@ session_start();
                   <input required class="form-control" type="text" name="hachuras">
                   <span class="error"></span>
                 </div> -->
-                  <div class="dropdown">
-                    <span>Mouse over me</span>
-                    <div class="dropdown-content">
-                      <p>Hello World!</p>
+                <label for="nrTipoRocha">Hachuras:</label>
+                  <div class="ui fluid selection dropdown">
+                    <input type="hidden" name="user">
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Select Friend</div>
+                    <div class="menu">
+                      <div class="item" data-value="jenny">
+                        <img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg">
+                        Jenny Hess
+                      </div>
+                      <div class="item" data-value="elliot">
+                        <img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg">
+                        Elliot Fu
+                      </div>
+                      <div class="item" data-value="stevie">
+                        <img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg">
+                        Stevie Feliciano
+                      </div>
+                      <div class="item" data-value="christian">
+                        <img class="ui mini avatar image" src="/images/avatar/small/christian.jpg">
+                        Christian
+                      </div>
+                      <div class="item" data-value="matt">
+                        <img class="ui mini avatar image" src="/images/avatar/small/matt.jpg">
+                        Matt
+                      </div>
+                      <div class="item" data-value="justen">
+                        <img class="ui mini avatar image" src="/images/avatar/small/justen.jpg">
+                        Justen Kitsune
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -109,6 +135,5 @@ session_start();
 <script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
 <script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
 <script type="text/javascript" src="../javascript/script.js"></script>
-
 
 </html>
