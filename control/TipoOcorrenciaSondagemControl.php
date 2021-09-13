@@ -18,10 +18,15 @@ class TipoOcorrenciaSondagemControl{
                 $this->modelo->setNrProfundidadeMax($_POST["nrProfundidadeMax"]);
                 $this->modelo->setNmTipoRocha($_POST["nmTipoRocha"]);
                 $this->modelo->setIdNomeSondagem($_SESSION["id"]);
-                $this->modelo->setNmHachuras($_POST["nmHachuras"]);
                 $this->modelo->setNmCor($_POST["nmCor"]);
                 $this->dao->inserir($this->modelo);
-                header("Location:../view/CadParametrosSondagem.php");
+                $mais = $_POST['mais'];
+                echo $mais;
+                 if($mais == "+"){
+                     header("Location:../view/CadTipoOcorrenciaSondagem.php");
+                 }else{
+                     header("Location:../view/CadParametrosSondagem.php");
+                 }
                 break;
         }
     }

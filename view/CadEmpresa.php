@@ -25,10 +25,10 @@ include_once("../control/conexao.php");
                 <img src="../image/icon/icon-azul-navbar.png" alt="">
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">INÍCIO</a></li>
-                <li><a href="index.html">SOBRE</a></li>
-                <li><a href="index.html">GUIA</a></li>
-                <li><a href="index.html">COMEÇAR</a></li>
+                <li><a href="/index.html">INÍCIO</a></li>
+                <li><a href="#">SOBRE</a></li>
+                <li><a href="#">GUIA</a></li>
+                <li><a href="../view/CadNomeSondagem.php">COMEÇAR</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>

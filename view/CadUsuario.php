@@ -29,6 +29,7 @@ include_once("../control/conexao.php");
                 <li><a href="index.html">SOBRE</a></li>
                 <li><a href="index.html">GUIA</a></li>
                 <li><a href="index.html">COMEÇAR</a></li>
+                <li><a href="../view/CadEmpresa.php">EMPRESA</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>

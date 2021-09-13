@@ -80,3 +80,26 @@ input~label {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.input-adicionar{
+    letter-spacing: unset !important;
+    margin-top: unset !important;
+    padding: unset !important;
+    width: unset !important;
+    background: unset !important;
+    cursor: unset !important;
+    color: #000 !important;
+    border:0 !important;
+    font-size: 35px !important;
+    float: right;
+    font-weight: unset !important;
+    border-radius: unset !important;
+    transition: unset !important;
+    border-color: unset !important;
+    height: 40px !important;
+}
+
+.input-adicionar:hover {
+    letter-spacing: unset !important;
+    background: transparent !important;
+}

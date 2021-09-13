@@ -1,17 +1,20 @@
+<?php
+session_start();
+include_once("../control/conexao.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>ModGeo | Início</title>
-    <!-- Favicon do site-->
-    <link rel="shortcut icon" href="img/icon/logo-modgeo-favicon.ico" type="image/x-icon">
-    <!-- Css style e JS do site-->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="image/icon/icon-azul.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- fonte do site-->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <title>Modgeo | Inicio</title>
 </head>
 
 <body>
@@ -19,13 +22,14 @@
         <nav>
             <div class="logo">
                 <!-- <img src="img/icon/icon-azul-navbar.png"> -->
-                <img src="../image/icon/icon-azul-navbar.png" alt="">
+                <img src="image/icon/icon-azul-navbar.png" alt="">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">INÍCIO</a></li>
                 <li><a href="index.html">SOBRE</a></li>
                 <li><a href="index.html">GUIA</a></li>
-                <li><a href="index.html">COMEÇAR</a></li>
+                <li><a href="view/CadNomeSondagem.php">COMEÇAR</a></li>
+                <li><a href="../view/CadEmpresa.php">EMPRESA</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>
@@ -34,24 +38,55 @@
             </div>
         </nav>
     </header>
-
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="slider-principal">
-                        <p>ooo</p>
-                    </div>
-                </div>
+        <div class="slider-principal">
+            <div class="img-principal">
+                <img src="image/background-index.gif">
+            </div>
+            <div class="text-principal">
+                <h1>Seja bem-vindo ao novo Modgeo!</h1>
+                <p>O Modgeo está de cara nova, afim de atender os seus antigos e novos usuários da melhor maneira
+                    possível. Agora de forma totalmente Web, os usuários poderem desfrutar das antigas e novas funções
+                    do repaginado Modgeo. Lindo, moderno e confortável, esse é o Modgeo.</p>
+                <a href="view/CadNomeSondagem.php">Começar a usar</a>
+            </div>
+        </div>
+        <div class="slider-one">
+            <div class="text-one">
+                <h1>Uma nova forma de modelar as sondagens</h1>
+                <p></p>
+            </div>
+            <div class="img-one">
 
+            </div>
+        </div>
+        <div class="slider-two">
+            <div class="img-two">
+
+            </div>
+            <div class="text-two">
+                <h1>O que há de novo?</h1>
+            </div>
+
+        </div>
+        <div class="slider-three">
+            <div class="img-three">
+                <img src="image/icon/icon-button-index.png">
+            </div>
+            <div class="text-three">
+                <h2>Comece a utilizar agora mesmo!</h2>
+                <a href="view/CadNomeSondagem.php">Começar</a>
+            </div>
+            <div class="footer">
+                © 2020 - 2021 Copyright - ModGeo - Português(Brasil)
             </div>
         </div>
     </main>
 
-    <!--//Primeiro slider//-->
-    
-   
-
 </body>
+
+<script type="text/javascript" src="../javascript/plugins/plugin-mask.js"></script>
+<script type="text/javascript" src="../javascript/plugins/jquery.js"></script>
+<script type="text/javascript" src="../javascript/script.js"></script>
 
 </html>

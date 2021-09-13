@@ -5,7 +5,6 @@ class TipoOcorrenciaSondagem
     private $nrProfundidadeMax;
     private $nmTipoRocha;
     private $idNomeSondagem;
-    private $nmHachuras;
     private $nmCor;
 
     /**
@@ -70,22 +69,6 @@ class TipoOcorrenciaSondagem
     public function setIdNomeSondagem($idNomeSondagem)
     {
         $this->idNomeSondagem = $idNomeSondagem;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNmHachuras()
-    {
-        return $this->nmHachuras;
-    }
-
-    /**
-     * @param mixed $hachuras
-     */
-    public function setNmHachuras($nmHachuras)
-    {
-        $this->nmHachuras = $nmHachuras;
     }
 
     /**

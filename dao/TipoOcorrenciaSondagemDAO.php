@@ -14,13 +14,12 @@ class TipoOcorrenciaSondagemDAO
     }
     function inserir(TipoOcorrenciaSondagem $modelo)
     {        
-        $sql = "INSERT INTO tipo_ocorrencia_sondagem(nrProfundidadeMin, nrProfundidadeMax, nmTipoRocha, id_sondagem,nmHachuras,nmCor)
+        $sql = "INSERT INTO tipo_ocorrencia_sondagem(nrProfundidadeMin, nrProfundidadeMax, nmTipoRocha, id_sondagem,nmCor)
         VALUES(
             '" . $modelo->getNrProfundidadeMin() . "',
             '" . $modelo->getNrProfundidadeMax() . "',
             '" . $modelo->getNmTipoRocha() . "',
             '" . $modelo->getIdNomeSondagem() . "',
-            '" . $modelo->getNmHachuras() . "',
             '" . $modelo->getNmCor() . "'
         )";
         $this->conn->exec($sql);

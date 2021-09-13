@@ -21,7 +21,6 @@ navSlide();
 
 //MASCARAS DE INPUT
 function inputHandler(masks, max, event) {
-    debugger;
     if (masks != null || masks != '') {
         var c = event.target;
         var v = c.value.replace(/\D/g, '');
@@ -192,7 +191,6 @@ $(document).ready(function () {
 })
 
 //Lista cidade e estados
-debugger
 $(document).ready(function(){
     carregar_json('Estado');
     function carregar_json(id, cidade_id){
